@@ -21,6 +21,19 @@
 
 
 //Create Wireframe
+//1. Homepage (Create Portfolio Page, SignIn-SignOut)
+//2. Create Portfolio (Get User Information)
+//IF Checkbox Projects, Education, etc
+//THEN Content Box pops out
+//THEN On Submit, Take information IF is there to render.
+//3. Render HTML/CSS
+
+
+//Goals after Lunch
+
+//1, Models
+//2 GraphQL
+//3. Work on the React
 
 
 

@@ -19,16 +19,6 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  firstName: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  lastName: {
-    type: String,
-    required: true,
-    trim: true,
-  },
   user_id: {
     type: INT,
     required: true,
