@@ -36,7 +36,11 @@
 //3. Work on the React
 
 
-
+//Christian Questions
+//1. Can we rename git commits? **IMPORTANT**
+//2. How do we render unto an HTML/CSS?
+//*Portfolio ID? */
+//3. 
 
 
 
