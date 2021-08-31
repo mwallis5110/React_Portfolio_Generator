@@ -19,10 +19,11 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  thoughts: [ //Definitely edit this part
+  user_id: [ 
     {
-      type: Schema.Types.ObjectId,
-      ref: "Thought",
+      type: int,
+      required: true,
+      unique: true,
     },
   ],
 });
