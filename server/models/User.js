@@ -19,13 +19,11 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  user_id: [ 
-    {
-      type: int,
-      required: true,
-      unique: true,
-    },
-  ],
+  user_id: {
+    type: INT,
+    required: true,
+    unique: true,
+  },
 });
 
 userSchema.pre("save", async function (next) {
