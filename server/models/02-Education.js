@@ -2,12 +2,21 @@ const { Schema, model } = require("mongoose");
 
 
 const educationSchema = new Schema({
-  username: {
-    
-  },
-  email: {
-    
-  },
+    institution: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    degree: {
+        type: String,
+        required: false,
+        trim: true,
+    },
+    graduationDate: {
+        type: String,
+        required: true,
+        trim: true,
+    },
   });
   
   

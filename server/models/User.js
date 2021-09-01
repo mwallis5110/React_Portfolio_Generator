@@ -8,6 +8,11 @@ const userSchema = new Schema({
     unique: true,
     trim: true,
   },
+  user_id: {
+    type: INT,
+    required: true,
+    unique: true,
+  },
   email: {
     type: String,
     required: true,
@@ -17,12 +22,12 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 5,
+    minlength: 8,
   },
-  user_id: {
-    type: INT,
+  avatar: {
+    type: String,
     required: true,
-    unique: true,
+    trim: true,
   },
 });
 

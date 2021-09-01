@@ -1,33 +1,31 @@
 const { Schema, model } = require("mongoose");
 
 
-const skillsSchema = new Schema({
-    languages: {
-        type: String,
-        required: false,
-        trim: true,
-    },
-    programmingLanguages: {
+const projectSchema = new Schema({
+    title: {
         type: String,
         required: true,
         trim: true,
     },
-    hardSkills: {
+    description: {
         type: String,
         required: true,
         trim: true,
     },
-    softSkills: {
+    images: {
         type: String,
         required: true,
         trim: true,
     },
-
+    link: {
+        type: String,
+        required: true,
+        trim: true,
+    },
 });
 
 
 
+const Projects = model("Project", projectSchema);
 
-const Skills = model("Skills", skillsSchema);
-
-module.exports = Skills;
+module.exports = Projects;

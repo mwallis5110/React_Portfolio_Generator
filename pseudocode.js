@@ -37,11 +37,16 @@
 
 
 //Christian Questions
+/** Answered Questions **/
 //1. Can we rename git commits? **IMPORTANT**
 //2. How do we render unto an HTML/CSS?
 //*Portfolio ID? */
-//3. 
 
+
+/** New Questions **/
+//3. How to deal with hardSkills/softSkills in database management.
+//4. How does GraphQL create a unique ID? (Ref. MERN 26, typedefs.js vs /models/users.js)
+//5. Why does GraphQL not starting?
 
 
 
