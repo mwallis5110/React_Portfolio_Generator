@@ -2,17 +2,16 @@ const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 const userSchema = new Schema({
+  Portfolio: [{
+    type: Schema.Types.ObjectId,
+    ref: "Portfolio",
+}],
   username: {
     type: String,
     required: true,
     unique: true,
     trim: true,
   },
-  // user_id: {
-  //   type: INT,
-  //   required: true,
-  //   unique: true,
-  // },
   email: {
     type: String,
     required: true,
