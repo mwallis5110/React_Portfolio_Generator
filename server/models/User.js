@@ -8,11 +8,11 @@ const userSchema = new Schema({
     unique: true,
     trim: true,
   },
-  user_id: {
-    type: INT,
-    required: true,
-    unique: true,
-  },
+  // user_id: {
+  //   type: INT,
+  //   required: true,
+  //   unique: true,
+  // },
   email: {
     type: String,
     required: true,
@@ -26,7 +26,7 @@ const userSchema = new Schema({
   },
   avatar: {
     type: String,
-    required: true,
+    required: false,
     trim: true,
   },
 });

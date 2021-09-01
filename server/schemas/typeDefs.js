@@ -1,28 +1,56 @@
-// const { gql } = require('apollo-server-express');
+const { gql } = require('apollo-server-express');
 
-// const typeDefs = gql`
-//   type User {
-//     _id: ID
-//     username: String
-//     email: String
-//     password: String
-//     thoughts: [Thought]!
-//   }
+const typeDefs = gql`
+  type User {
+    _id: ID
+    username: String
+    email: String
+    password: String
+  }
+  
+  type Query {
+    users: [User]
+    user(username: String!): User
+    me: User
+  }`;
 
-//   type Thought {
-//     _id: ID
-//     thoughtText: String
-//     thoughtAuthor: String
-//     createdAt: String
-//     comments: [Comment]!
-//   }
 
-//   type Comment {
+//   type AboutMe{
 //     _id: ID
-//     commentText: String
-//     commentAuthor: String
+//     AboutMeText: String
 //     createdAt: String
 //   }
+
+//   type Education{
+//     _id: ID
+//     EducationText: String
+//     createdAt: String
+//   }
+
+//   type Skills{
+//     _id: ID
+//     SkillsText: String
+//     createdAt: String
+//   }
+
+//   type Experience{
+//     _id: ID
+//     ExperienceText: String
+//     createdAt: String
+//   }
+
+//   type Projects{
+//     _id: ID
+//     ProjectsText: String
+//     createdAt: String
+//   }
+
+//   type ContactMe{
+//     _id: ID
+//     ContactMeText: String
+//     createdAt: String
+//   }
+
 
 //   type Auth {
 //     token: ID!
@@ -32,8 +60,6 @@
 //   type Query {
 //     users: [User]
 //     user(username: String!): User
-//     thoughts(username: String): [Thought]
-//     thought(thoughtId: ID!): Thought
 //     me: User
 //   }
 
@@ -48,4 +74,4 @@
 // `;
 
 
-// module.exports = typeDefs;
+module.exports = typeDefs;

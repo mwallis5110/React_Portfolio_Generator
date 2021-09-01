@@ -44,9 +44,9 @@
 
 
 /** New Questions **/
-//3. How to deal with hardSkills/softSkills in database management.
+//3. How to deal with hardSkills/softSkills in database management : leave Skills up to user input and create an array in State
 //4. How does GraphQL create a unique ID? (Ref. MERN 26, typedefs.js vs /models/users.js)
-//5. Why does GraphQL not starting?
+//5. Why is GraphQL not starting?
 
 
 

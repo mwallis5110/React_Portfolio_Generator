@@ -1,12 +1,12 @@
-// const { AuthenticationError } = require('apollo-server-express');
-// const { User, Thought } = require('../models');
-// const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
+const { User, Thought } = require('../models');
+const { signToken } = require('../utils/auth');
 
-// const resolvers = {
-//   Query: {
-//     users: async () => {
-//       return User.find().populate('thoughts');
-//     },
+const resolvers = {
+  Query: {
+    users: async () => {
+      return User.find();
+    },
 //     user: async (parent, { username }) => {
 //       return User.findOne({ username }).populate('thoughts');
 //     },
@@ -114,7 +114,7 @@
 //       }
 //       throw new AuthenticationError('You need to be logged in!');
 //     },
-//   },
-// };
+  },
+};
 
-// module.exports = resolvers;
+module.exports = resolvers;
