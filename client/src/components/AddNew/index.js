@@ -1,8 +1,9 @@
-import React, { useState } from "react"; //State would probably be used to display this card if the user doesn't have the max number of portfolios associated with their account
+import React, { useState } from "react"; //State would probably be used to display this card if the user doesn't have the max number of portfolios 
+//associated with their account. Maybe? 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card} from 'react-bootstrap';
 
-function AddNew(props) {
+function AddNew() {
     return (
         <Card style={{ width: '20rem' }} className="text-center">
             <Card.Body>
@@ -13,7 +14,7 @@ function AddNew(props) {
 }
 
 //Basically a bootstrap card the same size as the displayed cards, but should behave as a button that redirects
-//to the "create portfolio" page. Maybe? Fuck if I know
+//to the "create portfolio" page. 
 
 
 export default AddNew;
