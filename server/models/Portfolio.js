@@ -56,12 +56,12 @@ const portfolioSchema = new Schema({
     },
     hardSkills: {
         type: Array,
-        required: true,
+        required: false,
         trim: true,
     },
     softSkills: {
         type: Array,
-        required: true,
+        required: false,
         trim: true,
     },
     },
