@@ -48,22 +48,22 @@ const resolvers = {
 
       return { token, user };
     },
-    addPortfolio: async (parent, args, context) => {
-      if (context.user) {
-        const portfolio = await Portfolio.create({
-          args,
-          thoughtAuthor: context.user.username,
-        });
+    // addPortfolio: async (parent, args, context) => {
+    //   if (context.user) {
+    //     const portfolio = await Portfolio.create({
+    //       args,
+    //       thoughtAuthor: context.user.username,
+    //     });
 
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { portfolio: portfolio._id } }
-        );
+    //     await User.findOneAndUpdate(
+    //       { _id: context.user._id },
+    //       { $addToSet: { portfolio: portfolio._id } }
+    //     );
 
-        return portfolio;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
+    //     return portfolio;
+    //   }
+    //   throw new AuthenticationError('You need to be logged in!');
+    // },
     //     addComment: async (parent, { thoughtId, commentText }, context) => {
     //       if (context.user) {
     //         return Thought.findOneAndUpdate(

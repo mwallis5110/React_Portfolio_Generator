@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import { useMutation } from '@apollo/client';
+import { SIGN_UP_USER } from '../../utils/mutations';
 
 function SignUp () {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [signUp, {error}] = useMutation(SIGN_UP_USER);
+    const handleSignUp = async () => {
+        let {user} = await signUp(firstName, lastName, email, password);
+        console.log(user);
+    }
+
 
     return (
         <form>
@@ -30,7 +38,7 @@ function SignUp () {
                 <input type="password" className="form-control" placeholder="Enter password" onChange={(e) => {setPassword(e.target.value)}}/>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+            <button type="button" className="btn btn-primary btn-block" onClick={handleSignUp}>Sign Up</button>
             <p className="forgot-password text-right">
                 Already registered <a href="#">sign in?</a>
             </p>
