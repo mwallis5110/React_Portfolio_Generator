@@ -4,15 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 //Trial//
-import { BrowserRouter } from "react-router-dom";
+
 // import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <App/>
     </React.StrictMode>,
-  </BrowserRouter>,
   document.getElementById('root')
 );
 
