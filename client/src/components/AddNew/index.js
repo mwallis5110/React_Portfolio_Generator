@@ -1,5 +1,4 @@
-import React, { useState } from "react"; //State would probably be used to display this card if the user doesn't have the max number of portfolios 
-//associated with their account. Maybe? 
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card} from 'react-bootstrap';
 
