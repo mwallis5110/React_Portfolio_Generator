@@ -75,3 +75,6 @@ const typeDefs = gql`
 
 
 module.exports = typeDefs;
+
+//addPortfolio(AboutMe: [firstName: String!, lastName: String!, introduction: String!]!
+//, Education: [], Skills: [], Experience: [], Projects: [], ContactMe: []!): Portfolio
