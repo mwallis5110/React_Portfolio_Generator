@@ -81,23 +81,23 @@ const resolvers = {
     //       }
     //       throw new AuthenticationError('You need to be logged in!');
     //     },
-        removePorfolio: async (parent, { PortfolioId }, context) => {
-          if (context.user) {
-            const portfolio = await Portfolio.findOneAndDelete({
-              _id: PortfolioId,
-              thoughtAuthor: context.user.username,
-            });
+    //     removePorfolio: async (parent, { PortfolioId }, context) => {
+    //       if (context.user) {
+    //         const portfolio = await Portfolio.findOneAndDelete({
+    //           _id: PortfolioId,
+    //           thoughtAuthor: context.user.username,
+    //         });
 
-            await User.findOneAndUpdate(
-              { _id: context.user._id },
-              { $pull: { portfolio: Portfolio._id } }
-            );
+    //         await User.findOneAndUpdate(
+    //           { _id: context.user._id },
+    //           { $pull: { portfolio: Portfolio._id } }
+    //         );
 
-            return portfolio;
-          }
-          throw new AuthenticationError('You need to be logged in!');
-        },
-    //     removeComment: async (parent, { thoughtId, commentId }, context) => {
+    //         return portfolio;
+    //       }
+    //       throw new AuthenticationError('You need to be logged in!');
+    //     },
+    // //     removeComment: async (parent, { thoughtId, commentId }, context) => {
     //       if (context.user) {
     //         return Thought.findOneAndUpdate(
     //           { _id: thoughtId },
