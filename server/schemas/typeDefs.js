@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type User {
@@ -6,14 +6,43 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    Portfolio: Portfolio!
   }
-  
+
+  type Portfolio {
+    _id: ID
+    portfolioText: String
+    portfolioAuthor: String
+    createdAt: String
+  }
+
   type Query {
     users: [User]
     user(username: String!): User
+    portfolio(username: String, portfolioId: ID): Portfolio
     me: User
-  }`;
+  }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
+  type Mutation {
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+    addPortfolio(portfolioText: String!): Portfolio
+    removePortfolio(portfolioId: ID!): Portfolio
+  }
+`;
+
+module.exports = typeDefs;
+// type User {
+//   _id: ID
+//   username: String
+//   email: String
+//   password: String
+// }
 
 //   type AboutMe{
 //     _id: ID
@@ -49,12 +78,6 @@ const typeDefs = gql`
 //     _id: ID
 //     ContactMeText: String
 //     createdAt: String
-//   }
-
-
-//   type Auth {
-//     token: ID!
-//     user: User
 //   }
 
 //   type Query {
