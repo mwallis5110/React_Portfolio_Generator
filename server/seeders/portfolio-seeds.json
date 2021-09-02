@@ -1,0 +1,54 @@
+{
+  "AboutMe": [
+    {
+      "firstName": "Karen",
+      "lastName": "Smith",
+      "introduction": "Hello my name is Karen"
+    }
+  ],
+  "Education": [
+    {
+      "institution": "University of Mean Girls",
+      "degree": "looking pretty",
+      "graduationDate": "2004",
+      "certification": ""
+    }
+  ],
+  "Skills": [
+    {
+      "languages": "English",
+      "programmingLanguages": "",
+      "hardSkills": "",
+      "softSkills": ""
+    }
+  ],
+  "Experience": [
+    {
+      "jobTitle": "wearing pink",
+      "jobDescription": "",
+      "startDate": "",
+      "endDate": "",
+      "achievements": ""
+    }
+  ],
+  "Projects": [
+    {
+      "title": "Burn Book",
+      "description": "write your deepest darkest secrets about people you detest",
+      "images": "https://via.placeholder.com/350x150",
+      "link": "https://meangirls.fandom.com/wiki/Burn_Book"
+    }
+  ],
+
+  "ContactMe": [
+    {
+      "phoneNumber": "0123456789",
+      "email": "karensmith@meangirls.com",
+      "linkedIn": "",
+      "github": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": ""
+    }
+  ]
+}
