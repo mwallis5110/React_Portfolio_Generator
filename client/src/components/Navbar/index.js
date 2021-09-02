@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
-function TopNavBar() {
+export default function TopNavBar() {
   return(
     <Navbar bg="dark">
     <Container>
@@ -16,5 +16,3 @@ function TopNavBar() {
   </Navbar>
   )
 }
-
-export default TopNavBar;
