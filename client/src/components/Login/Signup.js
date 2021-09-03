@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { useMutation } from '@apollo/client';
-import { SIGN_UP_USER } from '../../utils/mutations';
+import { ADD_USER } from '../../utils/mutations';
 
 function SignUp () {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    // const [firstName, setFirstName] = useState('');
+    // const [lastName, setLastName] = useState('');
+
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [signUp, {error}] = useMutation(SIGN_UP_USER);
+    const [signUp, {error}] = useMutation(ADD_USER);
     const handleSignUp = async () => {
-        let {user} = await signUp(firstName, lastName, email, password);
+        let {user} = await signUp(username, email, password);
+
+        // let {user} = await signUp(firstName, lastName, email, password);
         console.log(user);
     }
 
@@ -18,7 +22,7 @@ function SignUp () {
         <form>
             <h3>Sign Up</h3>
 
-            <div className="form-group">
+            {/* <div className="form-group">
                 <label>First name</label>
                 <input type="text" className="form-control" placeholder="First name" onChange={(e) => {setFirstName(e.target.value)}}/>
             </div>
@@ -26,6 +30,11 @@ function SignUp () {
             <div className="form-group">
                 <label>Last name</label>
                 <input type="text" className="form-control" placeholder="Last name" onChange={(e) => {setLastName(e.target.value)}}/>
+            </div> */}
+            <div className="form-group">
+                <label>Username</label>
+                {/* <input type="text" className="form-control" placeholder="First name" onChange={(e) => {setFirstName(e.target.value)}}/> */}
+                <input type="text" className="form-control" placeholder="Username" onChange={(e) => {setUsername(e.target.value)}}/>
             </div>
 
             <div className="form-group">
