@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
 const portfolioSchema = new Schema({
-  AboutMe: [{
+  AboutMe: {
     firstName: {
         type: String,
         required: true,
@@ -17,7 +17,7 @@ const portfolioSchema = new Schema({
         required: false,
         trim: true,
     },
-  }],
+  },
   Education: [
     {
     institution: {
