@@ -1,8 +1,9 @@
 import React from "react";
 
-export default function Portfolio() {
+
+export default function Create() {
   <div className="container">
-    <h1>Portfolio</h1>
+    <h1>Create Portfolio Here</h1>
     <p>Placeholder text</p>
   </div>;
 }
