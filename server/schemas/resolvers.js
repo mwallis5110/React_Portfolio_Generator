@@ -47,7 +47,9 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+
     },
+
     addPortfolio: async (parent, args, context) => {
       if (context.user) {
         const portfolio = await Portfolio.create({
@@ -99,25 +101,27 @@ const resolvers = {
 
         return portfolio;
       }
+
       throw new AuthenticationError('You need to be logged in!');
     },
-    removePorfolio: async (parent, {  }, context) => {
-      if (context.user) {
-        const portfolio = await Portfolio.findOneAndDelete({
-          _id: PortfolioId,
-          username: context.user.username,
-        });
+  }
+  // removePorfolio: async (parent, {  }, context) => {
+  //     if (context.user) {
+  //         const portfolio = await Portfolio.findOneAndDelete({
+  //             _id: PortfolioId,
+  //             username: context.user.username,
+  //           });
 
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { portfolio: portfolio._id } }
-        );
+  //           await User.findOneAndUpdate(
+  //               { _id: context.user._id },
+  //               { $pull: { portfolio: portfolio._id } }
+  //             );
 
-        return portfolio;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-  },
-};
-
+  //             return portfolio;
+  //           }
+  //           throw new AuthenticationError('You need to be logged in!');
+  //         },
+  //       },
+  //     };
+}
 module.exports = resolvers;
