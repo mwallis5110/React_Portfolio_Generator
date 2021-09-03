@@ -1,59 +1,101 @@
 import React, { useState } from "react";
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../../utils/mutations';
+import { Link } from "react-router-dom";
 
-function SignUp () {
-    // const [firstName, setFirstName] = useState('');
-    // const [lastName, setLastName] = useState('');
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../../utils/mutations";
 
-    const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [signUp, {error}] = useMutation(ADD_USER);
-    const handleSignUp = async () => {
-        let {user} = await signUp(username, email, password);
+// import Auth from "../utils/auth";
 
-        // let {user} = await signUp(firstName, lastName, email, password);
-        console.log(user);
+const Signup = () => {
+  const [formState, setFormState] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+
+    try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+
+    //   Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
     }
+  };
 
+  return (
+    <main className="flex-row justify-center mb-4">
+      <div className="col-12 col-lg-10">
+        <div className="card">
+          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <div className="card-body">
+            {data ? (
+              <p>
+                Success! You may now head{" "}
+                <Link to="/">back to the homepage.</Link>
+              </p>
+            ) : (
+              <form >
+                <input
+                  className="form-input"
+                  placeholder="Your username"
+                  name="username"
+                  type="text"
+                  value={formState.name}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Your email"
+                  name="email"
+                  type="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="******"
+                  name="password"
+                  type="password"
+                  value={formState.password}
+                  onChange={handleChange}
+                />
+                <button
+                  className="btn btn-block btn-primary"
+                  style={{ cursor: "pointer" }}
+                  type="button"
+                  onClick={(e)=>{handleFormSubmit(e)}}
+                >
+                  Submit
+                </button>
+              </form>
+            )}
 
-    return (
-        <form>
-            <h3>Sign Up</h3>
+            {error && (
+              <div className="my-3 p-3 bg-danger text-white">
+                {error.message}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};
 
-            {/* <div className="form-group">
-                <label>First name</label>
-                <input type="text" className="form-control" placeholder="First name" onChange={(e) => {setFirstName(e.target.value)}}/>
-            </div>
-
-            <div className="form-group">
-                <label>Last name</label>
-                <input type="text" className="form-control" placeholder="Last name" onChange={(e) => {setLastName(e.target.value)}}/>
-            </div> */}
-            <div className="form-group">
-                <label>Username</label>
-                {/* <input type="text" className="form-control" placeholder="First name" onChange={(e) => {setFirstName(e.target.value)}}/> */}
-                <input type="text" className="form-control" placeholder="Username" onChange={(e) => {setUsername(e.target.value)}}/>
-            </div>
-
-            <div className="form-group">
-                <label>Email address</label>
-                <input type="email" className="form-control" placeholder="Enter email" onChange={(e) => {setEmail(e.target.value)}}/>
-            </div>
-
-            <div className="form-group">
-                <label>Password</label>
-                <input type="password" className="form-control" placeholder="Enter password" onChange={(e) => {setPassword(e.target.value)}}/>
-            </div>
-
-            <button type="button" className="btn btn-primary btn-block" onClick={handleSignUp}>Sign Up</button>
-            <p className="forgot-password text-right">
-                Already registered <a href="#">sign in?</a>
-            </p>
-        </form>
-    );
-}
-
-
-export default SignUp;
+export default Signup;
