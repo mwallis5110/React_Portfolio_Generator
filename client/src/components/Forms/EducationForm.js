@@ -14,16 +14,20 @@ const EducationForm = () => {
       <div>
           <>
             <Container>
+            <h1>Education Things</h1>
                 <Row>
                     <Col>
                         <Form>
                             <Form.Control type="text" placeholder="Institution" />
                             <Form.Control type="text" placeholder="Degree" />
+                        </Form>
+                    </Col>
+                    <Col>
+                        <Form>
                             <Form.Control type="text" placeholder="Graduation Date" />
                             <Form.Control type="text" placeholder="Certifications" />
                         </Form>
                     </Col>
-                    <Col></Col>
                     <Col></Col>
                 </Row>
                 <Button variant="primary">Submit Education!</Button>{' '}

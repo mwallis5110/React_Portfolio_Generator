@@ -10,6 +10,8 @@ import SignUp from './components/Login/Signup';
 import Portfolio from './components/Portfolio/index';
 import AboutMeForm from './components/Forms/AboutMeForm';
 import EducationForm from './components/Forms/EducationForm';
+import ContactForm from './components/Forms/ContactForm';
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -49,7 +51,8 @@ function App() {
     <div>
       {/* <Portfolio /> */}
       {/* <AboutMeForm/> */}
-      <EducationForm/>
+      {/* <EducationForm/> */}
+      <ContactForm></ContactForm>
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
