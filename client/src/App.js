@@ -11,6 +11,8 @@ import Portfolio from './components/Portfolio/index';
 import AboutMeForm from './components/Forms/AboutMeForm';
 import EducationForm from './components/Forms/EducationForm';
 import ContactForm from './components/Forms/ContactForm';
+import ProjectForm from './components/Forms/ProjectForm';
+
 
 import {
   ApolloClient,
@@ -52,7 +54,8 @@ function App() {
       {/* <Portfolio /> */}
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
-      <ContactForm></ContactForm>
+      {/* <ContactForm></ContactForm> */}
+      {/* <ProjectForm></ProjectForm> */}
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
