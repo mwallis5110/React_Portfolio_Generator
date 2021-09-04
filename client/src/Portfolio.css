@@ -1,21 +1,14 @@
-html, body {
-    height: 100%;
-    margin: 0;
+.masterDiv{
+text-align: center;
+
 }
 
-
+.particlesDiv{
+    position: absolute;
+}
 .aboutMeContainer{
-    min-height: 100%; 
     text-align: center;
-    width:500px;
-    height:500px;
-    margin:0 auto;
-    background:#f7f7f7;
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin-left:-250px;
-    margin-top:-250px;
+    background-color: white;
 }
 
 .fullName{
