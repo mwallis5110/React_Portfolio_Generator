@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from './components/Login/Login';
 import SignUp from './components/Login/Signup';
 import Portfolio from './components/Portfolio/index';
+import AboutMeForm from './components/Forms/AboutMeForm';
 import {
   ApolloClient,
   InMemoryCache,
@@ -45,7 +46,8 @@ function App() {
 
   return (
     <div>
-      <Portfolio />
+      {/* <Portfolio /> */}
+      <AboutMeForm/>
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
