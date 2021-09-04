@@ -13,6 +13,7 @@ import EducationForm from './components/Forms/EducationForm';
 import ContactForm from './components/Forms/ContactForm';
 import ProjectForm from './components/Forms/ProjectForm';
 import ExperienceForm from './components/Forms/ExperienceForm';
+import MainPage from './components/MainPage/mainPage';
 
 
 import {
@@ -57,7 +58,8 @@ function App() {
       {/* <EducationForm/> */}
       {/* <ContactForm></ContactForm> */}
       {/* <ProjectForm></ProjectForm> */}
-      <ExperienceForm></ExperienceForm>
+      {/* <ExperienceForm></ExperienceForm> */}
+      <MainPage></MainPage>
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
