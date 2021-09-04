@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import SignUp from './components/Login/Signup';
 import Portfolio from './components/Portfolio/index';
 import AboutMeForm from './components/Forms/AboutMeForm';
+import SkillsForm from './components/Forms/SkillsForm';
 import EducationForm from './components/Forms/EducationForm';
 import ContactForm from './components/Forms/ContactForm';
 import ProjectForm from './components/Forms/ProjectForm';
@@ -55,9 +56,10 @@ function App() {
       {/* <Portfolio /> */}
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
+      <SkillsForm></SkillsForm>
       {/* <ContactForm></ContactForm> */}
       {/* <ProjectForm></ProjectForm> */}
-      <ExperienceForm></ExperienceForm>
+      {/* <ExperienceForm></ExperienceForm> */}
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
