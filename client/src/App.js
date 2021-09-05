@@ -78,6 +78,7 @@ export default function App() {
         )}
       </Router>
       {/* <Portfolio /> */}
+
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
       {/* <Conditionals /> */}

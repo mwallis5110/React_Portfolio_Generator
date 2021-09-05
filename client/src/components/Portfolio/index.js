@@ -14,6 +14,10 @@ export default function Portfolio() {
    },[]) 
   return(
     <div className = "masterDiv">
+        <div>
+            <Sidebar currentForm={currentForm} handleFormChange={handleFormChange} />
+            {renderForm()}
+        </div>
         <div className="particlesDiv">
         <Particles
                 params={{
@@ -30,7 +34,8 @@ export default function Portfolio() {
             />
         </div>
         <Container>
-            <div className = "aboutMeContainer">
+
+            {/* <div className = "aboutMeContainer">
                 <Row>
                     <Col sm={4}>
                         <div className = "pageOne">
@@ -42,7 +47,7 @@ export default function Portfolio() {
                         <h4> Here we can write their introduction stuff yadda yadda</h4>
                     </Col>
                 </Row>
-            </div>
+            </div> */}
         </Container>
     </div>
   )
