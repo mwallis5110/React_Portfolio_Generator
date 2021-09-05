@@ -54,7 +54,7 @@ export default function App() {
 
   return (
     <div>
-      {/* <Portfolio /> */}
+      <Portfolio />
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
       <Conditionals />
@@ -84,8 +84,6 @@ export default function App() {
     //              <Route exact path='/' component={Login} />
     //              <Route path="/sign-in" component={Login} />
     //              <Route path="/sign-up" component={SignUp} />
-                    
-                
     //            </Switch>
     //          </div>
     //        </div>
