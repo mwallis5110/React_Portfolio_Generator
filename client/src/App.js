@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import './Portfolio.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 // import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from './components/Login/Login';
@@ -30,7 +30,7 @@ import { setContext } from '@apollo/client/link/context';
 
 
 
-function App() {
+export default function App() {
   const httpLink = createHttpLink({
     uri: "/graphql",
   });
@@ -94,8 +94,6 @@ function App() {
     //  </ApolloProvider>
   );
 }
-
-export default App;
 
 
 

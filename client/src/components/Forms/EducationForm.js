@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
@@ -9,6 +9,9 @@ import Button from 'react-bootstrap/Button';
 
 
 const EducationForm = () => {
+
+    const [edu, setEdu] = useState({})
+
 
     return (
       <div>
@@ -24,8 +27,8 @@ const EducationForm = () => {
                     </Col>
                     <Col>
                         <Form>
-                            <Form.Control type="text" placeholder="Graduation Date" />
-                            <Form.Control type="text" placeholder="Certifications" />
+                            <Form.Control type="date" placeholder="Graduation Date" />
+                            {/* <Form.Control type="text" placeholder="Certifications" />  */}
                         </Form>
                     </Col>
                     <Col></Col>
