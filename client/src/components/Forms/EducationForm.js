@@ -11,9 +11,9 @@ import Button from 'react-bootstrap/Button';
 const EducationForm = ({edu, setEdu, setCurrentForm}) => {
 
     const [education, setEducation] = useState({
-        school: '', 
+        institution: '', 
         degree: '',
-        graduation: ''
+        graduationDate: ''
     })
 
     const handleInputChange = (event) => {
@@ -32,8 +32,8 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
                   <Form.Control
                     type="text"
                     placeholder="Institution"
-                    name="school"
-                    value={education.school}
+                    name="institution"
+                    value={education.institution}
                     onChange={(e) => {
                       handleInputChange(e);
                     }}
@@ -54,8 +54,8 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
                   <Form.Control
                     type="date"
                     placeholder="Graduation Date"
-                    name="graduation"
-                    value={education.graduation}
+                    name="graduationDate"
+                    value={education.graduationDate}
                     onChange={(e) => {
                       handleInputChange(e);
                     }}

@@ -48,7 +48,7 @@ const AboutMeForm = ({aboutMe, setAboutMe, setCurrentForm}) => {
                     <Form.Control
                       as="textarea"
                       rows={3}
-                      name="intro"
+                      name="introduction"
                       onChange={(e) => {
                         handleInputChange(e);
                       }}
