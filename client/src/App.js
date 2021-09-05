@@ -53,13 +53,13 @@ function App() {
 
   return (
     <div>
-      {/* <Portfolio /> */}
+      <Portfolio />
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
       {/* <ContactForm></ContactForm> */}
       {/* <ProjectForm></ProjectForm> */}
       {/* <ExperienceForm></ExperienceForm> */}
-      <MainPage></MainPage>
+      {/* <MainPage></MainPage> */}
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
@@ -86,8 +86,6 @@ function App() {
     //              <Route exact path='/' component={Login} />
     //              <Route path="/sign-in" component={Login} />
     //              <Route path="/sign-up" component={SignUp} />
-                    
-                
     //            </Switch>
     //          </div>
     //        </div>
