@@ -10,7 +10,7 @@ import Contact from "../Forms/ContactForm";
 export default function SidebarConditionals() {
   const [currentForm, setCurrentForm] = useState(1);
   const [aboutMe, setAboutMe] = useState({});
-  const [ed, setEd] = useState([]);
+  const [edu, setEdu] = useState([]);
   const [skills, setSkills] = useState([]);
   const [exp, setExp] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -23,7 +23,7 @@ export default function SidebarConditionals() {
     if (currentForm === 1) {
       return <About aboutMe = {aboutMe} setCurrentForm = {setCurrentForm} setAboutMe = {setAboutMe}/>;
     } else if (currentForm === 2) {
-      return <Education ed = {ed} setEd = {setEd}/>;
+      return <Education edu = {edu} setCurrentForm= {setCurrentForm} setEdu = {setEdu}/>;
     } else if (currentForm === 3) {
       return (
         <Skills

@@ -1,24 +1,23 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import './Portfolio.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/Navbar';
 // import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Login from './components/Login/Login';
-import SignUp from './components/Login/Signup';
+import Login from './pages/Login';
+import SignUp from './pages/Signup';
 import Portfolio from './components/Portfolio/index';
-import AboutMeForm from './components/Forms/AboutMeForm';
-import SkillsForm from './components/Forms/SkillsForm';
-import EducationForm from './components/Forms/EducationForm';
-import Sidebar from './components/Sidebar/sidebar';
+// import AboutMeForm from './components/Forms/AboutMeForm';
+// import SkillsForm from './components/Forms/SkillsForm';
+// import EducationForm from './components/Forms/EducationForm';
+// import Sidebar from './components/Sidebar/sidebar';
 import Conditionals from './components/Sidebar/sidebarConditionals';
-import ContactForm from './components/Forms/ContactForm';
-import ProjectForm from './components/Forms/ProjectForm';
-import ExperienceForm from './components/Forms/ExperienceForm';
-
-import NewPortfolioPage from './components/NewPortfolioPage/NewPortfolioPage';
-import MainPage from './components/MainPage/mainPage';
+// import ContactForm from './components/Forms/ContactForm';
+// import ProjectForm from './components/Forms/ProjectForm';
+// import ExperienceForm from './components/Forms/ExperienceForm';
+// import MainPage from './components/MainPage/mainPage';
+import Auth from './utils/auth';
 
 
 
@@ -34,6 +33,14 @@ import { setContext } from '@apollo/client/link/context';
 
 
 export default function App() {
+
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    let status=Auth.loggedIn()
+    console.log(status)
+    setLoggedIn(status)
+  },[])
+
   const httpLink = createHttpLink({
     uri: "/graphql",
   });
@@ -56,19 +63,26 @@ export default function App() {
   });
 
   return (
-    <div>
-      <Portfolio />
+    <ApolloProvider client={client}>
+      <Router>
+        {!isLoggedIn ? (
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/signup" component={SignUp} />
+          </Switch>
+        ) : (
+          <Switch>
+            <Route exact path="/" component={Portfolio} />
+            <Route exact path="/conditionals" component={Conditionals} />
+          </Switch>
+        )}
+      </Router>
+      {/* <Portfolio /> */}
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
+      {/* <Conditionals /> */}
+    </ApolloProvider>
 
-      <NewPortfolioPage/>
-      {/* <SkillsForm></SkillsForm> */}
-      {/* <ContactForm></ContactForm> */}
-      {/* <ProjectForm></ProjectForm> */}
-      {/* <ExperienceForm></ExperienceForm> */}
-      <Conditionals />
-
-    </div>
     // <ApolloProvider client={client}>
     //    <Router>
     //      <div className="App">
