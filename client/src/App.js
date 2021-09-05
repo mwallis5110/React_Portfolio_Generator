@@ -57,14 +57,7 @@ export default function App() {
       <Portfolio />
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
-<<<<<<< HEAD
-      {/* <ContactForm></ContactForm> */}
-      {/* <ProjectForm></ProjectForm> */}
-      {/* <ExperienceForm></ExperienceForm> */}
-      {/* <MainPage></MainPage> */}
-=======
       <Conditionals />
->>>>>>> 0583955cdfbae5109d3a4ee284583a5363d48ec7
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
