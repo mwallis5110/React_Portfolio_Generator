@@ -8,7 +8,6 @@ import Particles from 'react-particles-js';
 
 export default function Portfolio() {
   return(
-
     <div className = "masterDiv">
         <div className="particlesDiv">
         <Particles

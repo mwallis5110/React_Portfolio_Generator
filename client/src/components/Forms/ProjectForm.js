@@ -8,33 +8,32 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
-const EducationForm = () => {
+const ProjectForm = () => {
 
     return (
       <div>
           <>
             <Container>
-            <h1>Education Things</h1>
+            <h1>Project Things</h1>
                 <Row>
                     <Col>
                         <Form>
-                            <Form.Control type="text" placeholder="Institution" />
-                            <Form.Control type="text" placeholder="Degree" />
+                            <Form.Control type="text" placeholder="Project Title" />
+                            <Form.Control type="text" placeholder="Project Description" />
                         </Form>
                     </Col>
                     <Col>
                         <Form>
-                            <Form.Control type="text" placeholder="Graduation Date" />
-                            <Form.Control type="text" placeholder="Certifications" />
+                            <Form.Control type="text" placeholder="Image URL" />
+                            <Form.Control type="text" placeholder="URL to Project" />
                         </Form>
                     </Col>
-                    <Col></Col>
                 </Row>
-                <Button variant="primary">Submit Education!</Button>{' '}
+                <Button variant="primary">Submit Projects!</Button>{' '}
             </Container>
           </>
         </div>
         )};
   
-  export default EducationForm;
+  export default ProjectForm;
   
