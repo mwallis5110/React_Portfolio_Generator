@@ -27,11 +27,11 @@ const MainPage = () => {
                     </Col>
                     <Col sm={8}>
                         <AboutMeForm/>
-                        {/* <ContactForm/>
+                        <ContactForm/>
                         <EducationForm/>
                         <ExperienceForm/>
                         <EducationForm/>
-                        <ProjectForm/> */}
+                        <ProjectForm/>
                     </Col>
                 </Row>
         </Container>

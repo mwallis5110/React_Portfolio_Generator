@@ -1,15 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import './Portfolio.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 // import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from './components/Login/Login';
 import SignUp from './components/Login/Signup';
 import Portfolio from './components/Portfolio/index';
 import AboutMeForm from './components/Forms/AboutMeForm';
+import SkillsForm from './components/Forms/SkillsForm';
 import EducationForm from './components/Forms/EducationForm';
+import Sidebar from './components/Sidebar/sidebar';
+import Conditionals from './components/Sidebar/sidebarConditionals';
 import ContactForm from './components/Forms/ContactForm';
 import ProjectForm from './components/Forms/ProjectForm';
 import ExperienceForm from './components/Forms/ExperienceForm';
@@ -27,7 +30,7 @@ import { setContext } from '@apollo/client/link/context';
 
 
 
-function App() {
+export default function App() {
   const httpLink = createHttpLink({
     uri: "/graphql",
   });
@@ -49,17 +52,19 @@ function App() {
     cache: new InMemoryCache(),
   });
 
-
-
   return (
     <div>
       <Portfolio />
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
+<<<<<<< HEAD
       {/* <ContactForm></ContactForm> */}
       {/* <ProjectForm></ProjectForm> */}
       {/* <ExperienceForm></ExperienceForm> */}
       {/* <MainPage></MainPage> */}
+=======
+      <Conditionals />
+>>>>>>> 0583955cdfbae5109d3a4ee284583a5363d48ec7
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
@@ -94,8 +99,6 @@ function App() {
     //  </ApolloProvider>
   );
 }
-
-export default App;
 
 
 
