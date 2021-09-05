@@ -1,13 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Sidebar from "./sidebar";
-import { } from "react-bootstrap";
+// import { } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Particles from 'react-particles-js';
+import Axios from "axios";
+
 
 export default function Portfolio() {
+   useEffect(() => {
+    Axios.get('/test')
+   },[]) 
   return(
     <div className = "masterDiv">
         <div>
