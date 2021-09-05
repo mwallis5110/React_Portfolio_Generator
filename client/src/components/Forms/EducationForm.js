@@ -29,7 +29,7 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
             <Row>
               <Col>
                 <Form>
-                  <Form.Control
+                  <input
                     type="text"
                     placeholder="Institution"
                     name="institution"
@@ -38,7 +38,7 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
                       handleInputChange(e);
                     }}
                   />
-                  <Form.Control
+                  <input
                     type="text"
                     placeholder="Degree"
                     name="degree"
@@ -51,7 +51,7 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
               </Col>
               <Col>
                 <Form>
-                  <Form.Control
+                  <input
                     type="date"
                     placeholder="Graduation Date"
                     name="graduationDate"
@@ -68,7 +68,7 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
                   >
                     Add Education
                   </Button>
-                  {/* <Form.Control type="text" placeholder="Certifications" />  */}
+                  {/* <input type="text" placeholder="Certifications" />  */}
                 </Form>
               </Col>
               <Col></Col>

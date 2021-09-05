@@ -6,6 +6,7 @@ import Skills from "../Forms/SkillsForm";
 import Experience from "../Forms/ExperienceForm";
 import Projects from "../Forms/ProjectForm";
 import Contact from "../Forms/ContactForm";
+import Preview from "../Portfolio_Preview"
 
 export default function SidebarConditionals() {
   const [currentForm, setCurrentForm] = useState(1);
@@ -37,7 +38,18 @@ export default function SidebarConditionals() {
     } else if (currentForm === 5) {
       return <Projects projects = {projects} setProjects = {setProjects}/>;
     } else if (currentForm === 6) {
-      return <Contact contact = {contact} setContact = {setContact}/>;
+      return <Contact contact = {contact} setCurrentForm={setCurrentForm} setContact = {setContact}/>;
+    } else if (currentForm === 7) {
+      return (
+        <Preview
+          aboutMe={aboutMe}
+          edu={edu}
+          skills={skills}
+          exp={exp}
+          projects={projects}
+          contact={contact}
+        />
+      );
     }
   };
 

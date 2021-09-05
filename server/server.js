@@ -25,8 +25,8 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.get('/test', () => {
-  console.log('Test')
+app.post('/api/portfolio', (req, res) => {
+  console.log(req.body)
 })
 
 app.get('*', (req, res) => {

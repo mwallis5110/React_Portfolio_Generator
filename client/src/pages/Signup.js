@@ -31,6 +31,8 @@ export default function Signup() {
       const { data } = await addUser({
         variables: { ...formState },
       });
+      localStorage.setItem("userId", data.addUser._id);
+        localStorage.setItem("email", data.addUser.email);
 
       Auth.login(data.addUser.token);
     } catch (e) {

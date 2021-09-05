@@ -1,42 +1,31 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import Header from '../Header';
-import NavBar from '../Navbar'
+import NavBar from '../Navbar';
+import Axios from 'axios';
 
-export default function Projects() {
+
+export default function Preview({aboutMe, edu, skills, exp, projects, contact}) {
+  const submitPortfolio = () => {
+    const id = localStorage.getItem("user");
+    const email = localStorage.getItem("email");
+    const portfolio = {
+      AboutMe: aboutMe,
+      Education: edu,
+      Skills: {programmingLanguages:skills[0], hardSkills:skills[1], softSkills:skills[2] },
+      ContactMe: contact,
+      user: id, 
+      email: email
+    }
+    Axios.post('/api/portfolio', portfolio)
+  }
+
     return (
       <div className="container">
-        <Header />
-        <NavBar />
-        <h1>My Work</h1>
-        <p>Something something look what i did</p>
-
         <Card style={{ width: "18rem" }}>
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              Card Subtitle
-            </Card.Subtitle>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-          </Card.Body>
-        </Card>
-
-        <Card style={{ width: "18rem" }}>
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              Card Subtitle
-            </Card.Subtitle>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-          </Card.Body>
+          <h6>{aboutMe.firstName} {aboutMe.lastName}</h6>
+          <p>{aboutMe.introduction}</p>
+          <Button onClick={() => {submitPortfolio()}}>Submit Portfolio</Button>
         </Card>
       </div>
     )

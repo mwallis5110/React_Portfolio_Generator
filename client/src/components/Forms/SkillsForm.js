@@ -45,8 +45,8 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
               <Col>
                 <Form>
                   <Form.Label>Languages</Form.Label>
-                  <Form.Control type="text" placeholder="Spoken Languages" />
-                  <Form.Control
+                  <input type="text" placeholder="Spoken Languages" />
+                  <input
                     type="text"
                     placeholder="Programming Languages"
                     name="lang"
@@ -67,7 +67,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>Hard Skills</Form.Label>
-                    <Form.Control
+                    <input
                       as="textarea"
                       rows={3}
                       name="hard"
@@ -79,7 +79,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       Add Hard Skill!
                     </Button>{" "}
                     <Form.Label>Soft Skills</Form.Label>
-                    <Form.Control
+                    <input
                       as="textarea"
                       rows={3}
                       name="soft" 
