@@ -1,14 +1,20 @@
+import Button from '@restart/ui/esm/Button'
 import React from 'react';
+// import 'client/src/components/NewPortfolioPage/NewPortfolioPage.css';
+import './NewPortfolioPage.css';
 
-export default function NewPortfolioPage () {
+const NewPortfolioPage = () => {
     return (
-        <div className="container">
-            <div className="container">
-                <button className="btn">
 
-                </button>
+        <section className="section">
+            <div className="title">
+                <h2>Create your new portfolio!</h2>
             </div>
-        </div>
+            <div className="btn">
+            <button>+</button>
+            </div>
+        </section>
     )
-};
+}
 
+export default NewPortfolioPage;
