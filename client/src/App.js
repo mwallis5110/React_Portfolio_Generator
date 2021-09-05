@@ -14,6 +14,7 @@ import EducationForm from './components/Forms/EducationForm';
 import ContactForm from './components/Forms/ContactForm';
 import ProjectForm from './components/Forms/ProjectForm';
 import ExperienceForm from './components/Forms/ExperienceForm';
+import NewPortfolioPage from './components/NewPortfolioPage/NewPortfolioPage';
 
 
 import {
@@ -56,7 +57,8 @@ function App() {
       {/* <Portfolio /> */}
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
-      <SkillsForm></SkillsForm>
+      <NewPortfolioPage/>
+      {/* <SkillsForm></SkillsForm> */}
       {/* <ContactForm></ContactForm> */}
       {/* <ProjectForm></ProjectForm> */}
       {/* <ExperienceForm></ExperienceForm> */}
