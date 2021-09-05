@@ -1,13 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
+import './Portfolio.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/Navbar';
-import MainPage from './components/MainPage';
 // import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from './components/Login/Login';
 import SignUp from './components/Login/Signup';
-import Portfolio from './pages/Portfolio';
+import Portfolio from './components/Portfolio/index';
+import AboutMeForm from './components/Forms/AboutMeForm';
+import SkillsForm from './components/Forms/SkillsForm';
+import EducationForm from './components/Forms/EducationForm';
+import Sidebar from './components/Sidebar/sidebar';
+import Conditionals from './components/Sidebar/sidebarConditionals';
+import ContactForm from './components/Forms/ContactForm';
+import ProjectForm from './components/Forms/ProjectForm';
+import ExperienceForm from './components/Forms/ExperienceForm';
+import MainPage from './components/MainPage/mainPage';
+
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -41,59 +52,48 @@ export default function App() {
     cache: new InMemoryCache(),
   });
 
+  return (
+    <div>
+      {/* <Portfolio /> */}
+      {/* <AboutMeForm/> */}
+      {/* <EducationForm/> */}
+      <Conditionals />
+    </div>
+    // <ApolloProvider client={client}>
+    //    <Router>
+    //      <div className="App">
+    //        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+    //          <div className="container">
+    //            <Link className="navbar-brand" to={"/sign-in"}>Portfolio-Maker</Link>
+    //            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+    //              <ul className="navbar-nav ml-auto">
+    //                <li className="nav-item">
+    //                  <Link className="nav-link" to={"/sign-in"}>Login</Link>
+    //                </li>
+    //                <li className="nav-item">
+    //                  <Link className="nav-link" to={"/sign-up"}>Sign up</Link>
+    //                </li>
+    //              </ul>
+    //            </div>
+    //          </div>
+    //        </nav>
 
-
-//   return (
-//     <ApolloProvider client={client}>
-//       <Router>
-//         <div className="App">
-//           <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-//             <div className="container">
-//               <Link className="navbar-brand" to={"/sign-in"}>
-//                 Portfolio-Maker
-//               </Link>
-//               <div
-//                 className="collapse navbar-collapse"
-//                 id="navbarTogglerDemo02"
-//               >
-//                 <ul className="navbar-nav ml-auto">
-//                   <li className="nav-item">
-//                     <Link className="nav-link" to={"/sign-in"}>
-//                       Login
-//                     </Link>
-//                   </li>
-//                   <li className="nav-item">
-//                     <Link className="nav-link" to={"/portfolios"}>
-//                       My Portfolios
-//                     </Link>
-//                     {/* Where does "to={} come from????" */}
-//                   </li>
-//                   <li className="nav-item">
-//                     <Link className="nav-link" to={"/sign-up"}>
-//                       Sign up
-//                     </Link>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </div>
-//           </nav>
-
-//           <div className="auth-wrapper">
-//             <div className="auth-inner">
-//               <Switch>
-//                 <Route exact path="/" component={Login} />
-//                 <Route path="/sign-in" component={Login} />
-//                 <Route path="/sign-up" component={SignUp} />
-//                 <Route path="/portfolio" component={Portfolio} />
-//                 {/* Where does path come from?? */}
-//               </Switch>
-//             </div>
-//           </div>
-//         </div>
-//       </Router>
-//     </ApolloProvider>
-//   );
-// }
+    //        <div className="auth-wrapper">
+    //          <div className="auth-inner">
+    //            <Switch>
+    //              <Route exact path='/' component={Login} />
+    //              <Route path="/sign-in" component={Login} />
+    //              <Route path="/sign-up" component={SignUp} />
+                    
+                
+    //            </Switch>
+    //          </div>
+    //        </div>
+    //      </div>
+    //   </Router>
+    //  </ApolloProvider>
+  );
+}
 
 
 

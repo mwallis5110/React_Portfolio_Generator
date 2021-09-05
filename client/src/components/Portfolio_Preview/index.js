@@ -1,3 +1,8 @@
+import React from 'react';
+import { Card } from 'react-bootstrap';
+import Header from '../Header';
+import NavBar from '../Navbar'
+
 export default function Projects() {
     return (
       <div className="container">
