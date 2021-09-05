@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import './Portfolio.css';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,6 +10,8 @@ import SignUp from './components/Login/Signup';
 import Portfolio from './components/Portfolio/index';
 import AboutMeForm from './components/Forms/AboutMeForm';
 import EducationForm from './components/Forms/EducationForm';
+import Sidebar from './components/Sidebar/sidebar';
+import Conditionals from './components/Sidebar/sidebarConditionals';
 import {
   ApolloClient,
   InMemoryCache,
@@ -43,13 +45,12 @@ function App() {
     cache: new InMemoryCache(),
   });
 
-
-
   return (
     <div>
       {/* <Portfolio /> */}
       {/* <AboutMeForm/> */}
-      <EducationForm/>
+      {/* <EducationForm/> */}
+      <Conditionals />
     </div>
     // <ApolloProvider client={client}>
     //    <Router>
