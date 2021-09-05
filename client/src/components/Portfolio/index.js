@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Particles from 'react-particles-js';
 import Axios from "axios";
+import {Link} from 'react-router-dom';
 
 
 export default function Portfolio() {
@@ -29,7 +30,8 @@ export default function Portfolio() {
             />
         </div>
         <Container>
-
+            <Link to = '/conditionals'> Edit Portfolio
+            </Link>
             {/* <div className = "aboutMeContainer">
                 <Row>
                     <Col sm={4}>

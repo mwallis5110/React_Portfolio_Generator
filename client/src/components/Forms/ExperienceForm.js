@@ -18,16 +18,16 @@ const ExperienceForm = () => {
                 <Row>
                     <Col>
                         <Form>
-                            <Form.Control type="text" placeholder="Job Title" />
-                            <Form.Control type="date" placeholder="Start Date" />
-                            <Form.Control type="date" placeholder="End Date" />
+                            <input type="text" placeholder="Job Title" />
+                            <input type="date" placeholder="Start Date" />
+                            <input type="date" placeholder="End Date" />
                         </Form>
                     </Col>
                     <Col>
                         <Form>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label>Achievements</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
+                                <input as="textarea" rows={3} />
                             </Form.Group>
                         </Form>
                     </Col>
@@ -35,7 +35,7 @@ const ExperienceForm = () => {
                         <Form> 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label>Job Description</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
+                                <input as="textarea" rows={3} />
                             </Form.Group>
                         </Form>
                     </Col>
