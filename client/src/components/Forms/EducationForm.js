@@ -8,36 +8,83 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
-const EducationForm = () => {
+const EducationForm = ({edu, setEdu, setCurrentForm}) => {
 
-    const [edu, setEdu] = useState({})
+    const [education, setEducation] = useState({
+        school: '', 
+        degree: '',
+        graduation: ''
+    })
 
+    const handleInputChange = (event) => {
+      const { name, value } = event.target;
+      setEducation({ ...education, [name]: value });
+    };
 
     return (
       <div>
-          <>
-            <Container>
+        <>
+          <Container>
             <h1>Education Things</h1>
-                <Row>
-                    <Col>
-                        <Form>
-                            <Form.Control type="text" placeholder="Institution" />
-                            <Form.Control type="text" placeholder="Degree" />
-                        </Form>
-                    </Col>
-                    <Col>
-                        <Form>
-                            <Form.Control type="date" placeholder="Graduation Date" />
-                            {/* <Form.Control type="text" placeholder="Certifications" />  */}
-                        </Form>
-                    </Col>
-                    <Col></Col>
-                </Row>
-                <Button variant="primary">Submit Education!</Button>{' '}
-            </Container>
-          </>
-        </div>
-        )};
+            <Row>
+              <Col>
+                <Form>
+                  <Form.Control
+                    type="text"
+                    placeholder="Institution"
+                    name="school"
+                    value={education.school}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+                  <Form.Control
+                    type="text"
+                    placeholder="Degree"
+                    name="degree"
+                    value={education.degree}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+                </Form>
+              </Col>
+              <Col>
+                <Form>
+                  <Form.Control
+                    type="date"
+                    placeholder="Graduation Date"
+                    name="graduation"
+                    value={education.graduation}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+                  <Button
+                    onClick={() => {
+                      setEdu([...edu, education]);
+                      setEducation({});
+                    }}
+                  >
+                    Add Education
+                  </Button>
+                  {/* <Form.Control type="text" placeholder="Certifications" />  */}
+                </Form>
+              </Col>
+              <Col></Col>
+            </Row>
+            <Button
+              variant="primary"
+              onClick={() => {
+                setCurrentForm(3);
+              }}
+            >
+              Go To Skills
+            </Button>{" "}
+          </Container>
+        </>
+      </div>
+    );};
   
   export default EducationForm;
   
