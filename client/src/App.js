@@ -54,7 +54,6 @@ export default function App() {
 
   return (
     <div>
-      <Portfolio />
       {/* <AboutMeForm/> */}
       {/* <EducationForm/> */}
       <Conditionals />

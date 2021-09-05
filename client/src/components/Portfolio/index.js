@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Sidebar from "./sidebar";
 import { } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +10,10 @@ import Particles from 'react-particles-js';
 export default function Portfolio() {
   return(
     <div className = "masterDiv">
+        <div>
+            <Sidebar currentForm={currentForm} handleFormChange={handleFormChange} />
+            {renderForm()}
+        </div>
         <div className="particlesDiv">
         <Particles
                 params={{
@@ -25,7 +30,8 @@ export default function Portfolio() {
             />
         </div>
         <Container>
-            <div className = "aboutMeContainer">
+
+            {/* <div className = "aboutMeContainer">
                 <Row>
                     <Col sm={4}>
                         <div className = "pageOne">
@@ -37,7 +43,7 @@ export default function Portfolio() {
                         <h4> Here we can write their introduction stuff yadda yadda</h4>
                     </Col>
                 </Row>
-            </div>
+            </div> */}
         </Container>
     </div>
   )
