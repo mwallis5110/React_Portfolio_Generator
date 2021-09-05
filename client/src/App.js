@@ -16,6 +16,7 @@ import Conditionals from './components/Sidebar/sidebarConditionals';
 import ContactForm from './components/Forms/ContactForm';
 import ProjectForm from './components/Forms/ProjectForm';
 import ExperienceForm from './components/Forms/ExperienceForm';
+import MainPage from './components/MainPage/mainPage';
 
 
 import {
