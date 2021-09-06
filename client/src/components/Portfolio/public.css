@@ -20,6 +20,7 @@ img{
      width:100%;
      background-color: #6F8DB0;
      border-radius: 15px;
+     margin-top: 50px;
  }
  
  .footer{
@@ -60,15 +61,31 @@ img{
 
 .section-about{
     background-color:#9ada7d;
+    padding-bottom: 30px;
 }
+.aboutMeHeader{
+    padding-left: 35px;
+    padding-top: 45px;
+}
+
 .section-edu{
     background-color:#daaa7d
 }
+.eduHeader{
+    padding-left: 35px;
+    padding-top: 45px;
+}
+
 .section-contact{
     background-color:#6dbfe6
 }
+
 .section-skills{
     background-color:#f88484
+}
+.skillsHeader{
+    padding-left: 35px;
+    padding-top: 45px;
 }
 
 .section-card-aboutMe{
@@ -100,3 +117,14 @@ img{
     to {left: 0%;}
   }
 
+.loading{
+ text-align: center;
+ border-radius: 15px;
+ position:relative;
+ left: 50%;
+ top: 50%;
+ margin-top: 50px;
+ max-width: 75%;
+ -webkit-transform: translate(-50%, 0%);
+ transform: translate(-50%, 0%);
+}

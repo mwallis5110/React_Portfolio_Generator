@@ -25,7 +25,7 @@ export default function Public() {
         <div>
             {info.AboutMe !== undefined ? (
                 <div className="portfolioDiv">
-                    <h3>About Me</h3>
+                    <h3 className="aboutMeHeader"><span>About Me</span></h3>
                     <div className='section-about section-card section-card-aboutMe'>
                         <h1>
                             {port.AboutMe.firstName} {port.AboutMe.lastName}
@@ -33,7 +33,7 @@ export default function Public() {
                         <p>{port.AboutMe.introduction}</p>
                     </div>
 
-                    <h3>Education</h3>
+                    <h3 className="eduHeader">Education</h3>
                     {port.Education.map(edu => {
                         console.log(edu)
                         return (
@@ -44,7 +44,7 @@ export default function Public() {
                             </div>
                         )
                     })}
-                    <h3>Skills</h3>
+                    <h3 className="skillsHeader">Skills</h3>
                     <div className='section-contact section-card section-card-skills'>
                         <h6>GitHub: {port.Skills.hardSkills}</h6>
                         <h6>FaceBook: {port.ContactMe.facebook}</h6>
@@ -60,7 +60,7 @@ export default function Public() {
                         </footer>
                     </div>
                 </div>
-            ) : <h3>Not working... yet!</h3>}
+            ) : <h1 className="loading">Retrieving Portfolio...</h1>}
         </div>
     )
 };
