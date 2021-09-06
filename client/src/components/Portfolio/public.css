@@ -1,0 +1,37 @@
+img{
+    justify-content: center;
+    display: inline;
+    border-radius: 30px;
+    width:  40px;
+    height: 40px;
+    object-fit: cover;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 25px;
+ }
+ 
+ 
+ .container{
+     text-align: center;
+     height: 100%;
+     width:100%;
+     background-color: #6F8DB0;
+ }
+ 
+ .footer{
+     
+     bottom:0;
+    
+     height:100px;   /* Height of the footer */
+     border-radius: 15px;
+ }
+ 
+ .stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}

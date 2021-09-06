@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
-import AboutMe from "./AboutMe"
+// import AboutMe from "./AboutMe";
+import './public.css'
 
 
 export default function Public() {
@@ -49,7 +50,15 @@ export default function Public() {
                         <h6>FaceBook: {port.ContactMe.facebook}</h6>
                         <h6>Email: <a mailto={port.user_email}>{port.user_email}</a></h6>
                     </div>
-
+                    <div className="container">
+                        <footer className="footer">
+                            <a href={port.ContactMe.github}><img src="/icons/github.png" className = "icon" alt="Github"></img></a>
+                            <a href={port.ContactMe.linkedIn}><img src="/icons/linkedIn.png" className = "icon" alt="LinkedIn"></img></a>
+                            <a href={port.ContactMe.facebook}><img src = "/icons/facebook.png" className = "icon" alt="Facebook"></img></a>
+                            <a href={port.ContactMe.instagram}><img src = "/icons/instagram.png" className = "icon" alt="Instagram"></img></a>
+                            <span class="stretch"></span>
+                        </footer>
+                    </div>
                 </div>
             ) : <h3>Not working... yet!</h3>}
         </div>

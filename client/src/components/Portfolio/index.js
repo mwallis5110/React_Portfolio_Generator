@@ -7,6 +7,7 @@ import Particles from 'react-particles-js';
 import Axios from "axios";
 import {Link} from 'react-router-dom';
 import Auth from '../../utils/auth';
+import './createPortfolio.css';
 
 
 export default function Portfolio() {
@@ -14,9 +15,24 @@ export default function Portfolio() {
     let id = localStorage.getItem("userId")
     Axios.get('/api/myPortfolio/' + id).then(data => console.log(data)) 
    },[]) 
+
   return(
     <div className = "masterDiv">
-        {/* <div className="particlesDiv">
+        <div className="homepageDiv">
+            <h1 className="websiteName"> Portfolio Generator</h1>
+            <h1>Welcome back {/* {user} */}</h1>
+            <div>
+                <Link to = '/conditionals'> Edit Portfolio</Link>
+                <button onClick={()=> {Auth.logout()}}>LogOut</button>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+
+// Particle stuff (Pretty Lines)
+ {/* <div className="particlesDiv">
         <Particles
                 params={{
                 particles: {
@@ -31,25 +47,3 @@ export default function Portfolio() {
                 }}
             />
         </div> */}
-        <Container>
-            <button onClick={()=> {Auth.logout()}}>LogOut</button>
-            <Link to = '/conditionals'> Edit Portfolio
-            </Link>
-            {/* <div className = "aboutMeContainer">
-                <Row>
-                    <Col sm={4}>
-                        <div className = "pageOne">
-                            <h2>Hello my name is </h2>
-                            <h1 className = "fullName"> Joris Pow </h1>
-                        </div>
-                    </Col>
-                    <Col sm={8}>
-                        <h4> Here we can write their introduction stuff yadda yadda</h4>
-                    </Col>
-                </Row>
-            </div> */}
-        </Container>
-    </div>
-  )
-}
-
