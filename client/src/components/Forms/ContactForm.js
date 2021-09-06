@@ -32,6 +32,7 @@ const ContactForm = ({contact, setContact, setCurrentForm}) => {
             case 'phone':
                 setPhone(value);
                 break;
+            // DONT UNCOMMENT THIS PLEASE
             // case 'email':
             //     setEmail(value);
             //     break;
