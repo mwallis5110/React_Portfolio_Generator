@@ -6,24 +6,22 @@ import AboutMe from "./AboutMe"
 
 export default function Public (){
     const {email} = useParams();
-    const [port, setPort] = useState("")
-    const [info, setInfo] = useState("")
+    const [port, setPort] = useState([{}])
+    const [info, setInfo] = useState([{}])
     useEffect(() => { 
-        Axios.get('/api/publicPortfolio/' + email).then(data => setPort(data.data));
+        Axios.get('/api/publicPortfolio/' + email).then(data => setPort(data.data[0]));
         console.log(port);
     },[])
   
-
     useEffect(() => { 
         setInfo(port);
+        // This is undefined at this point
+        console.log(port);
     },[port])
 
+    console.log(port.AboutMe);
     return (
         <div>
-            {port?(
-            <AboutMe firstName={port.firstName}/>)  :
-            null
-        }
             {info.AboutMe!==undefined?(
                 <div>
                     <h1>
@@ -40,8 +38,7 @@ export default function Public (){
                         )
                     })}
                 </div>
-            ): null} 
-            <h3>hello world</h3>
+            ): <h3>shit aint working fam</h3>}
         </div>
     )
 }; 
