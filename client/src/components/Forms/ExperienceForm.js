@@ -10,6 +10,9 @@ import Button from 'react-bootstrap/Button';
 
 const ExperienceForm = () => {
 
+
+
+
     return (
       <div>
           <>
@@ -44,7 +47,7 @@ const ExperienceForm = () => {
             </Container>
           </>
         </div>
-        )};
-  
-  export default ExperienceForm;
-  
+    )
+};
+
+export default ExperienceForm;

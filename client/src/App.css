@@ -116,3 +116,28 @@ body, html, .App, #root, .auth-wrapper {
 .forgot-password a {
   color: #167bff;
 }
+
+
+
+
+/* Christian's Code */
+
+
+.section-card{
+  border-radius: 15px;
+  padding:2em;
+  text-align:center;
+  margin:1em 2em 1em 2em
+}
+.section-about{
+  background-color:#9ada7d
+}
+.section-edu{
+  background-color:#daaa7d
+}
+.section-contact{
+  background-color:#6dbfe6
+}
+.section-skills{
+  background-color:#f88484
+}
