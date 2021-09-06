@@ -27,7 +27,9 @@ const Login = (props) => {
       const { data } = await login({
         variables: { ...formState },
       });
-
+      console.log('Test', data)
+      localStorage.setItem('userId', data.login.user._id);
+      localStorage.setItem("email", data.login.user.email);
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
@@ -76,6 +78,7 @@ const Login = (props) => {
                 >
                   Submit
                 </button>
+                <Link to="/signup">Don't have an account? Sign up here.</Link>
               </form>
             )}
 

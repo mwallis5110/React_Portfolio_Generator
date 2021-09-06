@@ -5,6 +5,11 @@
     "password": "password01"
   },
   {
+    "username": "Test User",
+    "email": "testuser@gmail.com",
+    "password": "password123"
+  },
+  {
     "username": "Max Kanat-Alexander",
     "email": "mkanatalexander@techfriends.dev",
     "password": "password02"

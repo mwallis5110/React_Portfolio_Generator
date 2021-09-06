@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/react-portfolio-generator",
+  process.env.MONGODB_URI || "mongodb://localhost/Portfoliodb",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

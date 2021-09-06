@@ -1,13 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import './Portfolio.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 // import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Login from './components/Login/Login';
-import SignUp from './components/Login/Signup';
+import Login from './pages/Login';
+import SignUp from './pages/Signup';
 import Portfolio from './components/Portfolio/index';
+// import AboutMeForm from './components/Forms/AboutMeForm';
+// import SkillsForm from './components/Forms/SkillsForm';
+// import EducationForm from './components/Forms/EducationForm';
+// import Sidebar from './components/Sidebar/sidebar';
+import Conditionals from './components/Sidebar/sidebarConditionals';
+// import ContactForm from './components/Forms/ContactForm';
+// import ProjectForm from './components/Forms/ProjectForm';
+// import ExperienceForm from './components/Forms/ExperienceForm';
+// import MainPage from './components/MainPage/mainPage';
+import Auth from './utils/auth';
+import Public from './components/Portfolio/Public';
+
+
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -19,7 +33,15 @@ import { setContext } from '@apollo/client/link/context';
 
 
 
-function App() {
+export default function App() {
+
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    let status=Auth.loggedIn()
+    console.log(status)
+    setLoggedIn(status)
+  },[])
+
   const httpLink = createHttpLink({
     uri: "/graphql",
   });
@@ -41,12 +63,30 @@ function App() {
     cache: new InMemoryCache(),
   });
 
-
-
   return (
-    <div>
-      <Portfolio />
-    </div>
+    <ApolloProvider client={client}>
+      <Router>
+        {!isLoggedIn ? (
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/portfolio/:email" component={Public} />
+          </Switch>
+        ) : (
+          <Switch>
+            <Route exact path="/" component={Portfolio} />
+            <Route exact path="/conditionals" component={Conditionals} />
+            <Route exact path="/portfolio/:email" component={Public} />
+          </Switch>
+        )}
+      </Router>
+      {/* <Portfolio /> */}
+
+      {/* <AboutMeForm/> */}
+      {/* <EducationForm/> */}
+      {/* <Conditionals /> */}
+    </ApolloProvider>
+
     // <ApolloProvider client={client}>
     //    <Router>
     //      <div className="App">
@@ -72,8 +112,6 @@ function App() {
     //              <Route exact path='/' component={Login} />
     //              <Route path="/sign-in" component={Login} />
     //              <Route path="/sign-up" component={SignUp} />
-                    
-                
     //            </Switch>
     //          </div>
     //        </div>
@@ -82,8 +120,6 @@ function App() {
     //  </ApolloProvider>
   );
 }
-
-export default App;
 
 
 
@@ -105,3 +141,5 @@ export default App;
 // }
 
 // export default App;
+
+
