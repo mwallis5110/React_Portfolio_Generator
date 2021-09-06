@@ -5,6 +5,10 @@ import { ADD_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
+
+import './Signup.css'
+
+
 export default function Signup() {
   const [formState, setFormState] = useState({
     username: "",
@@ -40,12 +44,12 @@ export default function Signup() {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
-             {/* {data ? (
+      <main className="d-flex justify-content-center mb-4 primary-container">
+        <div className="col-12 col-lg-10 rounded first-division">
+          <div className="card">
+            <h4 className="bg-dark text-light p-2 welcome">Sign Up</h4>
+            <div className="card-body">
+              {/* {data ? (
               <p>
                 Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
@@ -80,21 +84,21 @@ export default function Signup() {
                   className="btn btn-block btn-primary"
                   style={{ cursor: "pointer" }}
                   type="button"
-                  onClick={(e)=>{handleFormSubmit(e)}}
+                  onClick={(e) => { handleFormSubmit(e) }}
                 >
                   Submit
                 </button>
               </form>
-            {/* )} */}
+              {/* )} */}
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
+              {error && (
+                <div className="my-3 p-3 bg-danger text-white">
+                  {error.message}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
   );
 };
