@@ -71,7 +71,6 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
                   {/* <input type="text" placeholder="Certifications" />  */}
                 </Form>
               </Col>
-              <Col></Col>
             </Row>
             <Button
               variant="primary"

@@ -9,7 +9,7 @@ import SignUp from './pages/Signup';
 import Portfolio from './components/Portfolio/index';
 // import AboutMeForm from './components/Forms/AboutMeForm';
 // import SkillsForm from './components/Forms/SkillsForm';
-// import EducationForm from './components/Forms/EducationForm';
+import EducationForm from './components/Forms/EducationForm';
 // import Sidebar from './components/Sidebar/sidebar';
 import Conditionals from './components/Sidebar/sidebarConditionals';
 // import ContactForm from './components/Forms/ContactForm';
@@ -28,6 +28,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
+import ExperienceForm from './components/Forms/ExperienceForm';
 
 
 
@@ -82,7 +83,11 @@ export default function App() {
       {/* <Portfolio /> */}
 
       {/* <AboutMeForm/> */}
+      {/* <ProjectForm/> */}
+      {/* <SkillsForm/> */}
+      <ExperienceForm/>
       {/* <EducationForm/> */}
+      {/* <ContactForm/> */}
       {/* <Conditionals /> */}
     </ApolloProvider>
 

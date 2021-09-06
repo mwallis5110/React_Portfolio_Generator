@@ -76,6 +76,7 @@ const ExperienceForm = ({exp, setExp, setCurrentForm}) => {
                       rows={3}
                       name="achievements"
                       value={experience.achievements}
+                      style={{ height: '70px' }}
                       onChange={(e) => {
                         handleInputChange(e);
                       }}
@@ -95,6 +96,7 @@ const ExperienceForm = ({exp, setExp, setCurrentForm}) => {
                       rows={3}
                       name="jobDescription"
                       value={experience.jobDescription}
+                      style={{ height: '70px' }}
                       onChange={(e) => {
                         handleInputChange(e);
                       }}
