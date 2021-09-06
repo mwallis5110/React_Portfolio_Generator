@@ -10,18 +10,6 @@ import Button from 'react-bootstrap/Button';
 
 const ExperienceForm = () => {
 
-    const [jobTitle, setJobTitle] = useState('')
-    const [startDate, setStartDate] = useState("");
-    const [endDate, setEndDate] = useState("");
-    const [endDate, setEndDate] = useState("");
-    const [endDate, setEndDate] = useState("");
-    
-    
-    
-    const [langArr, setLangArr] = useState([]);
-    const [hardArr, setHardArr] = useState([]);
-    const [softArr, setSoftArr] = useState([]);
-
 
 
 
