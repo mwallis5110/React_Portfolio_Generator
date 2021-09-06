@@ -3,7 +3,6 @@ import './App.css';
 import './Portfolio.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/Navbar';
-// import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from './pages/Login';
 import SignUp from './pages/Signup';

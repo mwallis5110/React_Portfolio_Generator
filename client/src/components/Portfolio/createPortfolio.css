@@ -1,0 +1,38 @@
+.masterDiv {
+    background-color: rgb(189, 189, 189);
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.whitePage{
+    background-color: white;
+    border-radius: 15px;
+    height: 400px;
+    width: 400px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.whitePage:hover{
+    box-shadow: 0 0 10px rgba(white, 10, 10, 10.)
+}
+
+.newPort{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+}
+
+
+.websiteName{
+    text-align:center;
+}

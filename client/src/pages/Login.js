@@ -5,6 +5,8 @@ import { LOGIN_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
+import './Login.css';
+
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -42,11 +44,12 @@ const Login = (props) => {
     });
   };
 
+
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <main className="d-flex justify-content-center mb-4 primary-container">
+      <div className="col-12 col-lg-10 first-division rounded align-items-center">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          <h4 className="bg-dark text-light p-2 welcome">Welcome!</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -57,7 +60,7 @@ const Login = (props) => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Email"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -65,7 +68,7 @@ const Login = (props) => {
                 />
                 <input
                   className="form-input"
-                  placeholder="******"
+                  placeholder="Password"
                   name="password"
                   type="password"
                   value={formState.password}
@@ -76,9 +79,9 @@ const Login = (props) => {
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >
-                  Submit
+                  Log In
                 </button>
-                <Link to="/signup">Don't have an account? Sign up here.</Link>
+                <Link to="/signup" className="sign-up-link">Don't have an account? Sign up here.</Link>
               </form>
             )}
 
