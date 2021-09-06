@@ -24,19 +24,32 @@ export default function Public (){
         <div>
             {info.AboutMe!==undefined?(
                 <div>
+                    <h5>About Me</h5>
+                    <div className='section-about section-card'>
                     <h1>
                         {port.AboutMe.firstName} {port.AboutMe.lastName} 
                     </h1>
                     <p>{port.AboutMe.introduction}</p>
+                    </div>
+                    
+                    <h5>Education</h5>
                     {port.Education.map(edu => {
+                        console.log(edu)
                         return (
-                          <div>
-                              <h4>{edu.institution[0]}</h4>
-                              <h4>{edu.degree[0]}</h4>
-                              <h4>{edu.graduationDate[0]}</h4>
+                          <div className='section-edu section-card'>
+                              <h4>School: {edu.institution[0]}</h4>
+                              <h4>Degree: {edu.degree[0]}</h4>
+                              <h4>Graduation Date: {edu.graduationDate[0]}</h4>
                           </div>
                         )
                     })}
+                    <h5>Skills</h5>
+                    <div className='section-contact section-card'>
+                        <h6>GitHub: {port.ContactMe.github}</h6>
+                        <h6>FaceBook: {port.ContactMe.facebook}</h6>
+                        <h6>Email: <a mailto={port.user_email}>{port.user_email}</a></h6>
+                    </div>
+
                 </div>
             ): <h3>shit aint working fam</h3>}
         </div>
