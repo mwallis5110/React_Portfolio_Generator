@@ -1,0 +1,20 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.masterDiv {
+    background-color: white;
+    max-width: 50%;
+    text-align: center;
+}
+
+.sideNav{
+    text-align: left;
+    background-color:gray;
+}
+
+.websiteName{
+    text-align:center;
+}
