@@ -6,11 +6,12 @@ import Skills from "../Forms/SkillsForm";
 import Experience from "../Forms/ExperienceForm";
 import Projects from "../Forms/ProjectForm";
 import Contact from "../Forms/ContactForm";
+import Preview from "../Portfolio_Preview"
 
 export default function SidebarConditionals() {
   const [currentForm, setCurrentForm] = useState(1);
   const [aboutMe, setAboutMe] = useState({});
-  const [ed, setEd] = useState([]);
+  const [edu, setEdu] = useState([]);
   const [skills, setSkills] = useState([]);
   const [exp, setExp] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -23,7 +24,7 @@ export default function SidebarConditionals() {
     if (currentForm === 1) {
       return <About aboutMe = {aboutMe} setCurrentForm = {setCurrentForm} setAboutMe = {setAboutMe}/>;
     } else if (currentForm === 2) {
-      return <Education ed = {ed} setEd = {setEd}/>;
+      return <Education edu = {edu} setCurrentForm= {setCurrentForm} setEdu = {setEdu}/>;
     } else if (currentForm === 3) {
       return (
         <Skills
@@ -37,7 +38,18 @@ export default function SidebarConditionals() {
     } else if (currentForm === 5) {
       return <Projects projects = {projects} setProjects = {setProjects}/>;
     } else if (currentForm === 6) {
-      return <Contact contact = {contact} setContact = {setContact}/>;
+      return <Contact contact = {contact} setCurrentForm={setCurrentForm} setContact = {setContact}/>;
+    } else if (currentForm === 7) {
+      return (
+        <Preview
+          aboutMe={aboutMe}
+          edu={edu}
+          skills={skills}
+          exp={exp}
+          projects={projects}
+          contact={contact}
+        />
+      );
     }
   };
 

@@ -14,8 +14,6 @@ const AboutMeForm = ({aboutMe, setAboutMe, setCurrentForm}) => {
         const {name, value} = event.target
         setAboutMe({...aboutMe, [name]: value})
     } 
-
-
     return (
       <div>
         <>
@@ -24,7 +22,7 @@ const AboutMeForm = ({aboutMe, setAboutMe, setCurrentForm}) => {
             <Row>
               <Col>
                 <Form>
-                  <Form.Control
+                  <input
                     type="text"
                     placeholder="First Name"
                     name="firstName"
@@ -32,7 +30,7 @@ const AboutMeForm = ({aboutMe, setAboutMe, setCurrentForm}) => {
                       handleInputChange(e);
                     }}
                   />
-                  <Form.Control
+                  <input
                     type="text"
                     placeholder="Last Name"
                     name="lastName"
@@ -45,10 +43,10 @@ const AboutMeForm = ({aboutMe, setAboutMe, setCurrentForm}) => {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>Introduction</Form.Label>
-                    <Form.Control
+                    <input
                       as="textarea"
                       rows={3}
-                      name="intro"
+                      name="introduction"
                       onChange={(e) => {
                         handleInputChange(e);
                       }}

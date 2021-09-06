@@ -18,14 +18,14 @@ const ProjectForm = () => {
                 <Row>
                     <Col>
                         <Form>
-                            <Form.Control type="text" placeholder="Project Title" />
-                            <Form.Control type="text" placeholder="Project Description" />
+                            <input type="text" placeholder="Project Title" />
+                            <input type="text" placeholder="Project Description" />
                         </Form>
                     </Col>
                     <Col>
                         <Form>
-                            <Form.Control type="text" placeholder="Image URL" />
-                            <Form.Control type="text" placeholder="URL to Project" />
+                            <input type="text" placeholder="Image URL" />
+                            <input type="text" placeholder="URL to Project" />
                         </Form>
                     </Col>
                 </Row>

@@ -1,15 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Particles from 'react-particles-js';
+import Axios from "axios";
+import {Link} from 'react-router-dom';
+import Auth from '../../utils/auth';
+
 
 export default function Portfolio() {
+   useEffect(() => {
+    let id = localStorage.getItem("userId")
+    Axios.get('/api/myPortfolio/' + id).then(data => console.log(data)) 
+   },[]) 
   return(
     <div className = "masterDiv">
-        <div className="particlesDiv">
+        {/* <div className="particlesDiv">
         <Particles
                 params={{
                 particles: {
@@ -23,9 +30,12 @@ export default function Portfolio() {
                 },
                 }}
             />
-        </div>
+        </div> */}
         <Container>
-            <div className = "aboutMeContainer">
+            <button onClick={()=> {Auth.logout()}}>LogOut</button>
+            <Link to = '/conditionals'> Edit Portfolio
+            </Link>
+            {/* <div className = "aboutMeContainer">
                 <Row>
                     <Col sm={4}>
                         <div className = "pageOne">
@@ -37,7 +47,7 @@ export default function Portfolio() {
                         <h4> Here we can write their introduction stuff yadda yadda</h4>
                     </Col>
                 </Row>
-            </div>
+            </div> */}
         </Container>
     </div>
   )

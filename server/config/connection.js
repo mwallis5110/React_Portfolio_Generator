@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb+srv://evanebert17:Z9oOHoo8WDDwD4hW@porj-gen.iueyt.mongodb.net/portfolio-gen?retryWrites=true&w=majority",
+  process.env.MONGODB_URI || "mongodb://localhost/Portfoliodb",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

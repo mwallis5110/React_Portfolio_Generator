@@ -26,38 +26,38 @@ const ExperienceForm = () => {
 
 
     return (
-        <div>
-            <>
-                <Container>
-                    <h1>Experience Things</h1>
-                    <Row>
-                        <Col>
-                            <Form>
-                                <Form.Control type="text" placeholder="Job Title" />
-                                <Form.Control type="date" placeholder="Start Date" />
-                                <Form.Control type="date" placeholder="End Date" />
-                            </Form>
-                        </Col>
-                        <Col>
-                            <Form>
-                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                    <Form.Label>Achievements</Form.Label>
-                                    <Form.Control as="textarea" rows={3} />
-                                </Form.Group>
-                            </Form>
-                        </Col>
-                        <Col>
-                            <Form>
-                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                    <Form.Label>Job Description</Form.Label>
-                                    <Form.Control as="textarea" rows={3} />
-                                </Form.Group>
-                            </Form>
-                        </Col>
-                    </Row>
-                    <Button variant="primary">Submit Experience!</Button>{' '}
-                </Container>
-            </>
+      <div>
+          <>
+            <Container>
+            <h1>Experience Things</h1>
+                <Row>
+                    <Col>
+                        <Form>
+                            <input type="text" placeholder="Job Title" />
+                            <input type="date" placeholder="Start Date" />
+                            <input type="date" placeholder="End Date" />
+                        </Form>
+                    </Col>
+                    <Col>
+                        <Form>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                <Form.Label>Achievements</Form.Label>
+                                <input as="textarea" rows={3} />
+                            </Form.Group>
+                        </Form>
+                    </Col>
+                    <Col>
+                        <Form> 
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                <Form.Label>Job Description</Form.Label>
+                                <input as="textarea" rows={3} />
+                            </Form.Group>
+                        </Form>
+                    </Col>
+                </Row>
+                <Button variant="primary">Submit Experience!</Button>{' '}
+            </Container>
+          </>
         </div>
     )
 };
