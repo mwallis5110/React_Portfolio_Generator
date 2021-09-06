@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
+import './ProjectForm.css';
 import Button from 'react-bootstrap/Button';
 
 
@@ -62,7 +63,7 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
                     }}
                   />
                 </Form>
-                <Button
+                <Button className = "wideBtn"
                   onClick={() => {
                     setProjects([...projects, assignment]);
                     setAssignment({});
