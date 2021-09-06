@@ -34,9 +34,17 @@ export default function SidebarConditionals() {
         />
       );
     } else if (currentForm === 4) {
-      return <Experience exp = {exp} setExp = {setExp} />;
+      return (
+        <Experience exp={exp} setCurrentForm={setCurrentForm} setExp={setExp} />
+      );
     } else if (currentForm === 5) {
-      return <Projects projects = {projects} setProjects = {setProjects}/>;
+      return (
+        <Projects
+          projects={projects}
+          setCurrentForm={setCurrentForm}
+          setProjects={setProjects}
+        />
+      );
     } else if (currentForm === 6) {
       return <Contact contact = {contact} setCurrentForm={setCurrentForm} setContact = {setContact}/>;
     } else if (currentForm === 7) {
