@@ -88,6 +88,7 @@ export default function Signup() {
                 >
                   Submit
                 </button>
+                <Link to="/" className="sign-up-link">Already have an account? Login up here.</Link>
               </form>
               {/* )} */}
 

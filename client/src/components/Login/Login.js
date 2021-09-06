@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 
-
-
 function Login () {
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    
+    const [password, setPassword] = useState('');    
     return (
         <form>
             <h3>Sign In</h3>
 
             <div className="form-group">
                 <label>Email address</label>
-                <input type="email" className="form-control" placeholder="Enter email" onChange={(e) => {setEmail(e.target.value)}}/>
+                <input type="email" className="form-control" placeholder="Email" onChange={(e) => {setEmail(e.target.value)}}/>
             </div>
 
             <div className="form-group">
                 <label>Password</label>
-                <input type="password" className="form-control" placeholder="Enter password" onChange={(e) => {setPassword(e.target.value)}}/>
+                <input type="password" className="form-control" placeholder="Password" onChange={(e) => {setPassword(e.target.value)}}/>
             </div>
 
             <div className="form-group">

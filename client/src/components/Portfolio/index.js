@@ -15,16 +15,19 @@ export default function Portfolio() {
     let id = localStorage.getItem("userId")
     Axios.get('/api/myPortfolio/' + id).then(data => console.log(data)) 
    },[]) 
+   
 
   return(
     <div className = "masterDiv">
         <div className="homepageDiv">
-            <h1 className="websiteName"> Portfolio Generator</h1>
-            <h1>Welcome back {/* {user} */}</h1>
+            <h1 className="websiteName"> Auto Resume</h1>
+            <h1>Welcome back!</h1>
             <div>
-                <Link to = '/conditionals'> Edit Portfolio</Link>
-                <button onClick={()=> {Auth.logout()}}>LogOut</button>
+                <div className="whitePage">
+                    <Link to = '/conditionals' className="newPort">Create a new Portfolio</Link>
+                </div>
             </div>
+            <button onClick={()=> {Auth.logout()}}>LogOut</button>
         </div>
     </div>
   )
