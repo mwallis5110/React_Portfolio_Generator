@@ -58,6 +58,14 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       handleInputChange(e);
                     }}
                   />
+                  <Button
+                    variant="primary"
+                    onClick={() => {
+                      setSpokenLangArr([...spokenLangArr,spokenLang]);
+                      setSpokenLang('');
+                    }}
+                  />
+
                   <input
                     type="text"
                     placeholder="Programming Languages"
@@ -70,7 +78,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                     variant="primary"
                     onClick={() => {
                       setLangArr([...langArr, lang]);
-                      setSpokenLangArr([...spokenLangArr,spokenLang]);
+                      setLang('');
                     }}
                   >
                     Add Language!
@@ -97,6 +105,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       variant="primary"
                       onClick={() => {
                         setHardArr([...hardArr, hard]);
+                        setHard('')
                       }}
                     >
                       Add Hard Skill!

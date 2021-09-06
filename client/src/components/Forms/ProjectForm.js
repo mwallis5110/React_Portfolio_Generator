@@ -55,15 +55,6 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
                 <Form>
                   <input
                     type="text"
-                    placeholder="Image URL"
-                    name="images"
-                    value={assignment.images}
-                    onChange={(e) => {
-                      handleInputChange(e);
-                    }}
-                  />
-                  <input
-                    type="text"
                     placeholder="URL to Project"
                     name="link"
                     value={assignment.link}
