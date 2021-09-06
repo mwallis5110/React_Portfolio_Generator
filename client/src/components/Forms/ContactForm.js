@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 const ContactForm = ({contact, setContact, setCurrentForm}) => {
     // Input States
     const [phone, setPhone] = useState("");
-    const [email, setEmail] = useState("");
+    // const [email, setEmail] = useState("");
     const [linkedIn, setLinkedIn] = useState("");
     const [github, setGithub] = useState("");
     const [twitter, setTwitter] = useState("");
@@ -32,9 +32,9 @@ const ContactForm = ({contact, setContact, setCurrentForm}) => {
             case 'phone':
                 setPhone(value);
                 break;
-            case 'email':
-                setEmail(value);
-                break;
+            // case 'email':
+            //     setEmail(value);
+            //     break;
             case 'linkedIn':
                 setLinkedIn(value);
                 break;
@@ -58,7 +58,7 @@ const ContactForm = ({contact, setContact, setCurrentForm}) => {
           e.preventDefault();
           const information = {
               phone:phone,
-              email:email,
+            //   email:email,
               linkedIn:linkedIn,
               github:github,
               twitter:twitter,
@@ -76,7 +76,7 @@ const ContactForm = ({contact, setContact, setCurrentForm}) => {
                     <Col>
                         <Form>
                             <input type="text" placeholder="Phone Number" name="phone" onChange={(e) => {handleInputChange(e);}}/>
-                            <input type="text" placeholder="Email" name="email" onChange={(e) => {handleInputChange(e);}}/>
+                            {/* <input type="text" placeholder="Email" name="email" onChange={(e) => {handleInputChange(e);}}/> */}
                         </Form>
                     </Col>
                     <Col>

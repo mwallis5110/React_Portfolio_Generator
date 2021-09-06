@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 export default function Preview({aboutMe, edu, skills, exp, projects, contact}) {
   const submitPortfolio = () => {
-    const id = localStorage.getItem("user");
+    const id = localStorage.getItem("userId");
     const email = localStorage.getItem("email");
     const portfolio = {
       AboutMe: aboutMe,
@@ -15,9 +15,9 @@ export default function Preview({aboutMe, edu, skills, exp, projects, contact}) 
       Skills: {programmingLanguages:skills[0], hardSkills:skills[1], softSkills:skills[2] },
       ContactMe: contact,
       user: id, 
-      email: email
+      user_email: email
     }
-    Axios.post('/api/portfolio', portfolio)
+    Axios.post('/api/portfolio', portfolio).then(data => console.log(data))
   }
 
     return (

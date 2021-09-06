@@ -14,8 +14,6 @@ const AboutMeForm = ({aboutMe, setAboutMe, setCurrentForm}) => {
         const {name, value} = event.target
         setAboutMe({...aboutMe, [name]: value})
     } 
-
-
     return (
       <div>
         <>

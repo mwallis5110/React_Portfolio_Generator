@@ -1,12 +1,11 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 
 const db = require('./config/connection');
-
+const {Portfolio} = require('./models');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -27,6 +26,15 @@ if (process.env.NODE_ENV === 'production') {
 
 app.post('/api/portfolio', (req, res) => {
   console.log(req.body)
+  Portfolio.create(req.body).then(data => {res.json(data)}) 
+})
+
+app.get('/api/myPortfolio/:id', (req, res) => {
+  Portfolio.find({user: req.params.id}).then (data => {res.json(data)})
+})
+
+app.get('/api/publicPortfolio/:email', (req, res) => {
+  Portfolio.find({user_email: req.params.email}).then (data => {res.json(data)})
 })
 
 app.get('*', (req, res) => {

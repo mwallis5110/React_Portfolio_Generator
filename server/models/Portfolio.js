@@ -122,13 +122,13 @@ const portfolioSchema = new Schema({
       required: false,
       trim: true,
     },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      match: [/.+@.+..+/, "Must match an email address!"],
-      trim: true,
-    },
+    // email: {
+    //   type: String,
+    //   required: true,
+    //   unique: true,
+    //   match: [/.+@.+..+/, "Must match an email address!"],
+    //   trim: true,
+    // },
     linkedIn: {
       type: String,
       required: false,
@@ -160,7 +160,7 @@ const portfolioSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: "User",
     },
-  email:
+  user_email:
   {
       type:String,
       required:true,

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 
@@ -31,8 +30,8 @@ export default function Signup() {
       const { data } = await addUser({
         variables: { ...formState },
       });
-      localStorage.setItem("userId", data.addUser._id);
-        localStorage.setItem("email", data.addUser.email);
+      localStorage.setItem("userId", data.addUser.user._id);
+      localStorage.setItem("email", data.addUser.user.email);
 
       Auth.login(data.addUser.token);
     } catch (e) {

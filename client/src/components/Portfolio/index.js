@@ -6,15 +6,17 @@ import Col from 'react-bootstrap/Col';
 import Particles from 'react-particles-js';
 import Axios from "axios";
 import {Link} from 'react-router-dom';
+import Auth from '../../utils/auth';
 
 
 export default function Portfolio() {
    useEffect(() => {
-    Axios.get('/test')
+    let id = localStorage.getItem("userId")
+    Axios.get('/api/myPortfolio/' + id).then(data => console.log(data)) 
    },[]) 
   return(
     <div className = "masterDiv">
-        <div className="particlesDiv">
+        {/* <div className="particlesDiv">
         <Particles
                 params={{
                 particles: {
@@ -28,8 +30,9 @@ export default function Portfolio() {
                 },
                 }}
             />
-        </div>
+        </div> */}
         <Container>
+            <button onClick={()=> {Auth.logout()}}>LogOut</button>
             <Link to = '/conditionals'> Edit Portfolio
             </Link>
             {/* <div className = "aboutMeContainer">
