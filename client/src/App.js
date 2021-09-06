@@ -18,6 +18,7 @@ import Conditionals from './components/Sidebar/sidebarConditionals';
 // import ExperienceForm from './components/Forms/ExperienceForm';
 // import MainPage from './components/MainPage/mainPage';
 import Auth from './utils/auth';
+import Public from './components/Portfolio/Public';
 
 
 
@@ -69,11 +70,13 @@ export default function App() {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/portfolio/:email" component={Public} />
           </Switch>
         ) : (
           <Switch>
             <Route exact path="/" component={Portfolio} />
             <Route exact path="/conditionals" component={Conditionals} />
+            <Route exact path="/portfolio/:email" component={Public} />
           </Switch>
         )}
       </Router>
