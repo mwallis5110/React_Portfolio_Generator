@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+input, label {
+    display:block;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: block; 
+    margin: 0 auto;
+}

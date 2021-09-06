@@ -1,0 +1,29 @@
+.container {
+    max-width: 1500px;
+}
+
+input, label {
+    display:block;
+
+}
+input {
+    width: 350px;
+    margin-bottom: 10px;
+}
+.leftCol {
+    border-style: solid 3px;
+    align-items: center;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.rightCol {
+    border-style: solid 3px;
+    align-items: center;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+
+/* .lcC {
+    align-items: center;
+} */
