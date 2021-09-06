@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
@@ -8,32 +8,91 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
-const ProjectForm = () => {
+const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
+
+    const [assignment, setAssignment] = useState({
+      title: '',
+      description: '',
+      images: '',
+      link: '',
+    });
+
+    const handleInputChange = (event) => {
+        const {name, value} = event.target;
+        setAssignment({...assignment, [name]: value});
+    };
 
     return (
       <div>
-          <>
-            <Container>
+        <>
+          <Container>
             <h1>Project Things</h1>
-                <Row>
-                    <Col>
-                        <Form>
-                            <input type="text" placeholder="Project Title" />
-                            <input type="text" placeholder="Project Description" />
-                        </Form>
-                    </Col>
-                    <Col>
-                        <Form>
-                            <input type="text" placeholder="Image URL" />
-                            <input type="text" placeholder="URL to Project" />
-                        </Form>
-                    </Col>
-                </Row>
-                <Button variant="primary">Submit Projects!</Button>{' '}
-            </Container>
-          </>
-        </div>
-        )};
+            <Row>
+              <Col>
+                <Form>
+                  <input
+                    type="text"
+                    placeholder="Project Title"
+                    name="title"
+                    value={assignment.title}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Project Description"
+                    name="description"
+                    value={assignment.description}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+                </Form>
+              </Col>
+              <Col>
+                <Form>
+                  <input
+                    type="text"
+                    placeholder="Image URL"
+                    name="images"
+                    value={assignment.images}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+                  <input
+                    type="text"
+                    placeholder="URL to Project"
+                    name="link"
+                    value={assignment.link}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+                </Form>
+                <Button
+                  onClick={() => {
+                    setProjects([...projects, assignment]);
+                    setAssignment({});
+                  }}
+                >
+                  Add Project
+                </Button>
+              </Col>
+            </Row>
+            <Button
+              variant="primary"
+              onClick={() => {
+                setCurrentForm(6);
+              }}
+            >
+              Submit Projects!
+            </Button>{" "}
+          </Container>
+        </>
+      </div>
+    );};
   
   export default ProjectForm;
   

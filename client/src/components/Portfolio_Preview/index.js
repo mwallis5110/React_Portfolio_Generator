@@ -13,6 +13,8 @@ export default function Preview({aboutMe, edu, skills, exp, projects, contact}) 
       AboutMe: aboutMe,
       Education: edu,
       Skills: {programmingLanguages:skills[0], hardSkills:skills[1], softSkills:skills[2] },
+      Experience: {jobTitle:exp[0], startDate:exp[1], endDate:exp[2], achievements: exp[3], description:exp[4]},
+      Projects: {title:projects[0], description:projects[1], images:projects[2], link:projects[3]},
       ContactMe: contact,
       user: id, 
       user_email: email

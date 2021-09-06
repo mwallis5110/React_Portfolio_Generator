@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
@@ -8,46 +8,121 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
-const ExperienceForm = () => {
+const ExperienceForm = ({exp, setExp, setCurrentForm}) => {
+    const [experience, setExperience] = useState({
+        jobTitle: '',
+        jobDescription: '',
+        startDate: '',
+        endDate: '',
+        achievements: '',
+    }) 
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setExperience({ ...experience, [name]: value})
+    }
 
 
 
 
     return (
       <div>
-          <>
-            <Container>
+        <>
+          <Container>
             <h1>Experience Things</h1>
-                <Row>
-                    <Col>
-                        <Form>
-                            <input type="text" placeholder="Job Title" />
-                            <input type="date" placeholder="Start Date" />
-                            <input type="date" placeholder="End Date" />
-                        </Form>
-                    </Col>
-                    <Col>
-                        <Form>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Achievements</Form.Label>
-                                <input as="textarea" rows={3} />
-                            </Form.Group>
-                        </Form>
-                    </Col>
-                    <Col>
-                        <Form> 
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Job Description</Form.Label>
-                                <input as="textarea" rows={3} />
-                            </Form.Group>
-                        </Form>
-                    </Col>
-                </Row>
-                <Button variant="primary">Submit Experience!</Button>{' '}
-            </Container>
-          </>
-        </div>
-    )
-};
+            <Row>
+              <Col>
+                <Form>
+                  <input
+                    type="text"
+                    placeholder="Job Title"
+                    name="jobTitle"
+                    value={experience.jobTitle}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
 
-export default ExperienceForm;
+                  <input
+                    type="date"
+                    placeholder="Start Date"
+                    name="startDate"
+                    value={experience.startDate}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+
+                  <input
+                    type="date"
+                    placeholder="End Date"
+                    name="endDate"
+                    value={experience.endDate}
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
+                  />
+                </Form>
+              </Col>
+              <Col>
+                <Form>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label>Achievements</Form.Label>
+                    <input
+                      as="textarea"
+                      rows={3}
+                      name="achievements"
+                      value={experience.achievements}
+                      onChange={(e) => {
+                        handleInputChange(e);
+                      }}
+                    />
+                  </Form.Group>
+                </Form>
+              </Col>
+              <Col>
+                <Form>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label>Job Description</Form.Label>
+                    <input
+                      as="textarea"
+                      rows={3}
+                      name="jobDescription"
+                      value={experience.jobDescription}
+                      onChange={(e) => {
+                        handleInputChange(e);
+                      }}
+                    />
+                    <Button
+                      onClick={() => {
+                        setExp([...exp, experience]);
+                        setExperience({});
+                      }}
+                    >
+                      Add Experience
+                    </Button>
+                  </Form.Group>
+                </Form>
+              </Col>
+            </Row>
+            <Button
+              variant="primary"
+              onClick={() => {
+                setCurrentForm(5);
+              }}
+            >
+              Submit Experience!
+            </Button>{" "}
+          </Container>
+        </>
+      </div>
+    );};
+  
+  export default ExperienceForm;
+  
