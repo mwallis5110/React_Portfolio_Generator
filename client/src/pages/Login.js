@@ -46,7 +46,6 @@ const Login = (props) => {
 
   return (
     <main className="d-flex justify-content-center mb-4 primary-container">
-      <div className="col-12 col-lg-10 first-division rounded align-items-center">
         <div className="card">
           <h4 className="bg-dark text-light p-2 welcome">Welcome!</h4>
           <div className="card-body">
@@ -93,7 +92,6 @@ const Login = (props) => {
             )}
           </div>
         </div>
-      </div>
     </main>
   );
 };

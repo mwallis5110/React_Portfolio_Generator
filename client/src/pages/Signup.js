@@ -43,7 +43,7 @@ export default function Signup() {
 
   return (
     <main className="d-flex justify-content-center mb-4 primary-container">
-      <div className="col-12 col-lg-10 rounded first-division">
+      
         <div className="card">
           <h4 className="bg-dark text-light p-2 welcome">Sign Up</h4>
           <div className="card-body">
@@ -94,7 +94,7 @@ export default function Signup() {
             )}
           </div>
         </div>
-      </div>
+      
     </main>
   );
 }
