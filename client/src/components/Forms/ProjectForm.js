@@ -27,7 +27,7 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
       <div>
         <>
           <Container>
-            <h1>Project Things</h1>
+            <h1>Past Projects</h1>
             <Row>
               <Col>
                 <Form>
@@ -62,8 +62,7 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
                       handleInputChange(e);
                     }}
                   />
-                </Form>
-                <Button className = "wideBtn"
+                  <Button className = "wideBtn"
                   onClick={() => {
                     setProjects([...projects, assignment]);
                     setAssignment({});
@@ -71,6 +70,7 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
                 >
                   Add Project
                 </Button>
+                </Form>
               </Col>
             </Row>
             <Button

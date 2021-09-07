@@ -29,7 +29,7 @@ const ExperienceForm = ({exp, setExp, setCurrentForm}) => {
       <div>
         <>
           <Container>
-            <h1>Experience Things</h1>
+            <h1>Work Experience</h1>
             <Row>
               <Col>
                 <Form>

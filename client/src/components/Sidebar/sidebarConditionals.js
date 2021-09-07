@@ -6,7 +6,8 @@ import Skills from "../Forms/SkillsForm";
 import Experience from "../Forms/ExperienceForm";
 import Projects from "../Forms/ProjectForm";
 import Contact from "../Forms/ContactForm";
-import Preview from "../Portfolio_Preview"
+import Preview from "../Portfolio_Preview";
+import './sidebar.css';
 
 export default function SidebarConditionals() {
   const [currentForm, setCurrentForm] = useState(1);
@@ -65,7 +66,7 @@ export default function SidebarConditionals() {
 
   return (
     <div>
-      <Sidebar currentForm={currentForm} handleFormChange={handleFormChange} />
+      <Sidebar currentForm={currentForm} handleFormChange={handleFormChange} id="currentForm"/>
       {renderForm()}
     </div>
   );
