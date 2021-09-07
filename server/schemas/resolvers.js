@@ -1,6 +1,6 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Portfolio } = require('../models');
-const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require("apollo-server-express");
+const { User, Portfolio } = require("../models");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
@@ -8,21 +8,12 @@ const resolvers = {
       return User.find();
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('Portfolio');
+      return User.findOne({ username }).populate("Portfolio");
     },
-    // thoughts: async (parent, { username }) => {
-    //   const params = username ? { username } : {};
-    //   return Portfolio.find(params).sort({ createdAt: -1 });
-    // },
+
     portfolio: async (parent, { PortfolioId }) => {
       return Portfolio.findOne({ _id: PortfolioId });
     },
-    // me: async (parent, args, context) => {
-    //   if (context.user) {
-    //     return User.findOne({ _id: context.user._id }).populate('thoughts');
-    //   }
-    //   throw new AuthenticationError('You need to be logged in!');
-    // },
   },
 
   Mutation: {
@@ -35,19 +26,18 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError("No user found with this email address");
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError("Incorrect credentials");
       }
 
       const token = signToken(user);
 
       return { token, user };
-
     },
 
     addPortfolio: async (parent, args, context) => {
@@ -56,7 +46,7 @@ const resolvers = {
           AboutMe: {
             firstName: args.firstName,
             lastName: args.lastName,
-            introduction: args.introduction
+            introduction: args.introduction,
           },
           Education: {
             institution: args.institution,
@@ -102,9 +92,9 @@ const resolvers = {
         return portfolio;
       }
 
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("You need to be logged in!");
     },
-  }
+  },
   // removePorfolio: async (parent, {  }, context) => {
   //     if (context.user) {
   //         const portfolio = await Portfolio.findOneAndDelete({
@@ -123,5 +113,5 @@ const resolvers = {
   //         },
   //       },
   //     };
-}
+};
 module.exports = resolvers;

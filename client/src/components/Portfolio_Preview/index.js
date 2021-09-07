@@ -1,19 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Education from "../Forms/EducationForm";
-import Skills from "../Forms/SkillsForm";
-import Experience from "../Forms/ExperienceForm";
-import Projects from "../Forms/ProjectForm";
-import Contact from "../Forms/ContactForm";
-// import Preview from './Portfolio_Preview';
 import { Row, Card, Button } from "react-bootstrap";
-import Header from "../Header";
-import NavBar from "../Navbar";
 import { useParams } from "react-router";
 import Axios from "axios";
-import './preview.css';
+import "./preview.css";
 import { useHistory } from "react-router-dom";
-
-// How should forms imported here interact witht he rest of the page?
 
 export default function Preview({
   aboutMe,
@@ -23,7 +13,6 @@ export default function Preview({
   projects,
   contact,
 }) {
-  // const [currentForm, setCurrentForm] = useState(1);
   const { emailAddress } = useParams();
   const [port, setPort] = useState([{}]);
   const [info, setInfo] = useState([{}]);
@@ -40,7 +29,7 @@ export default function Preview({
     console.log(port);
   }, [port]);
 
-  const history = useHistory()
+  const history = useHistory();
 
   const submitPortfolio = () => {
     const id = localStorage.getItem("userId");
@@ -54,23 +43,22 @@ export default function Preview({
         hardSkills: skills[2],
         softSkills: skills[3],
       },
-      Experience: exp, 
+      Experience: exp,
       Projects: projects,
       ContactMe: contact,
       user: id,
       user_email: email,
     };
-  // };
+    // };
 
-  Axios.post('/api/portfolio', portfolio).then(data => {
-      console.log(data)
-    history.push('/portfolio/' + data.data.user_email)
-  })
+    Axios.post("/api/portfolio", portfolio).then((data) => {
+      console.log(data);
+      history.push("/portfolio/" + data.data.user_email);
+    });
   };
 
   return (
     //About Me info
-    
 
     <div className="container">
       <Card style={{ width: "18rem" }}>
