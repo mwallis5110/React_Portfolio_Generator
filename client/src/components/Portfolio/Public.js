@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
 import './public.css'
-
+import { Link } from 'react-router-dom';
 
 export default function Public() {
     const { email } = useParams();
@@ -57,10 +57,10 @@ export default function Public() {
                     
                     <div className="container">
                         <footer className="footer">
-                            <div onClick={() => {handleLink(info.ContactMe.github)}}><img src="/icons/github.png" className = "icon" alt="Github"></img></div>
-                            <div onClick={() => {handleLink(info.ContactMe.linkedIn)}}><img src="/icons/linkedIn.png" className = "icon" alt="LinkedIn"></img></div>
-                            <div onClick={() => {handleLink(info.ContactMe.facebook)}}><img src = "/icons/facebook.png" className = "icon" alt="Facebook"></img></div>
-                            <div onClick={() => {handleLink(info.ContactMe.instagram)}}><img src = "/icons/instagram.png" className = "icon" alt="Instagram"></img></div>
+                            <div target="_blank" onClick={() => {handleLink("//"+info.ContactMe.github)}}><img src="/icons/github.png" className = "icon" alt="Github"></img></div>
+                            <div onClick={() => {handleLink("//"+info.ContactMe.linkedIn)}}><img src="/icons/linkedIn.png" className = "icon" alt="LinkedIn"></img></div>
+                            <div onClick={() => {handleLink("//"+info.ContactMe.facebook)}}><img src = "/icons/facebook.png" className = "icon" alt="Facebook"></img></div>
+                            <div onClick={() => {handleLink("//"+info.ContactMe.instagram)}}><img src = "/icons/instagram.png" className = "icon" alt="Instagram"></img></div>
                             <span class="stretch"></span>
                         </footer>
                     </div>
