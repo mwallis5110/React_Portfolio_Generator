@@ -73,7 +73,7 @@ const ContactForm = ({contact, setContact, setCurrentForm}) => {
       <div>
           <>
             <Container>
-                <h1>Contact Things</h1>
+                <h1>Contact Information</h1>
                 <Row>
                     <Col>
                         <Form>

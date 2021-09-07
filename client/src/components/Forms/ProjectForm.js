@@ -27,7 +27,7 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
       <div>
         <>
           <Container>
-            <h1>Project Things</h1>
+            <h1>Projects</h1>
             <Row>
               <Col>
                 <Form>
@@ -69,7 +69,7 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
                     setAssignment({});
                   }}
                 >
-                  Add Project
+                  Add
                 </Button>
               </Col>
             </Row>

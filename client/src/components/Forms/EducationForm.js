@@ -25,7 +25,7 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
       <div>
         <>
           <Container>
-            <h1>Education Things</h1>
+            <h1>Education</h1>
             <Row>
               <Col>
                 <Form>

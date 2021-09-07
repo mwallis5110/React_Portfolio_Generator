@@ -19,7 +19,7 @@ const AboutMeForm = ({ aboutMe, setAboutMe, setCurrentForm }) => {
     <div>
       <>
         <Container>
-          <h1>About Me Things</h1>
+          <h1>About Me</h1>
           <Row>
             <Col>
               <Form>
@@ -40,7 +40,7 @@ const AboutMeForm = ({ aboutMe, setAboutMe, setCurrentForm }) => {
                   }}
                 />
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                  <Form.Label>Example textarea</Form.Label>
+                  <Form.Label>A Brief Personal Introduction</Form.Label>
                   <Form.Control as="textarea" onChange={(e) => { handleInputChange(e) }}
                     rows={3}
                     style={{ height: '223px' }} />
@@ -48,7 +48,7 @@ const AboutMeForm = ({ aboutMe, setAboutMe, setCurrentForm }) => {
               </Form>
             </Col>
           </Row>
-          <Button variant="primary" onClick={() => { setCurrentForm(2) }}>Submit About Me!</Button>{" "}
+          <Button variant="primary" onClick={() => { setCurrentForm(2) }}>Submit</Button>{" "}
         </Container>
       </>
     </div >

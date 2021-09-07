@@ -65,7 +65,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       setSpokenLang('');
                     }}
                   />
-
+                    Add a Language!
                   <input
                     type="text"
                     placeholder="Programming Languages"
@@ -81,7 +81,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       setLang('');
                     }}
                   >
-                    Add Language!
+                    Add a Programming Language!
                   </Button>{" "}
                 </Form>
               </Col>

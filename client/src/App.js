@@ -85,7 +85,7 @@ export default function App() {
       {/* <AboutMeForm/> */}
       {/* <ProjectForm/> */}
       {/* <SkillsForm/> */}
-      <ExperienceForm/>
+      {/* <ExperienceForm/> */}
       {/* <EducationForm/> */}
       {/* <ContactForm/> */}
       {/* <Conditionals /> */}
