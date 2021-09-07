@@ -9,6 +9,7 @@ import Portfolio from "./components/Portfolio/index";
 import Conditionals from "./components/Sidebar/sidebarConditionals";
 import Auth from "./utils/auth";
 import Public from "./components/Portfolio/Public";
+import Preview from './components/Portfolio_Preview/practiceIndex'
 
 
 import {
@@ -66,5 +67,6 @@ export default function App() {
         )}
       </Router>
     </ApolloProvider>
+    // <Preview/>
   );
 }
