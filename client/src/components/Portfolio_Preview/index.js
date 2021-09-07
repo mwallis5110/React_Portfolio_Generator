@@ -60,8 +60,8 @@ export default function Preview({
   return (
     //About Me info
 
-    <div className="container">
-      <Card style={{ width: "18rem" }}>
+    <div>
+      <Card>
         <h6>
           {aboutMe.firstName} {aboutMe.lastName}
         </h6>
@@ -69,7 +69,7 @@ export default function Preview({
       </Card>
 
       {/* Education info */}
-      <Card style={{ width: "40rem" }}>
+      <Card>
         {edu.map((data) => {
           return (
             <div>
@@ -82,8 +82,7 @@ export default function Preview({
       </Card>
 
       {/* Skills info */}
-      <Row>
-        <Card style={{ width: "40rem" }}>
+        <Card>
           {skills[0]
             ? skills[0].map((data) => {
                 return (
@@ -94,7 +93,7 @@ export default function Preview({
               })
             : null}
         </Card>
-        <Card style={{ width: "40rem" }}>
+        <Card>
           {skills[1]
             ? skills[1].map((data) => {
                 return (
@@ -105,7 +104,7 @@ export default function Preview({
               })
             : null}
         </Card>
-        <Card style={{ width: "40rem" }}>
+        <Card>
           {skills[2]
             ? skills[2].map((data) => {
                 return (
@@ -116,7 +115,7 @@ export default function Preview({
               })
             : null}
         </Card>
-        <Card style={{ width: "40rem" }}>
+        <Card>
           {skills[3]
             ? skills[3].map((data) => {
                 return (
@@ -127,10 +126,9 @@ export default function Preview({
               })
             : null}
         </Card>
-      </Row>
 
       {/* Experience Info */}
-      <Card style={{ width: "40rem" }}>
+      <Card>
         {exp.map((data) => {
           return (
             <div>
@@ -145,7 +143,7 @@ export default function Preview({
       </Card>
 
       {/* Projects Info */}
-      <Card style={{ width: "40rem" }}>
+      <Card>
         {projects.map((data) => {
           return (
             <div>
@@ -158,7 +156,7 @@ export default function Preview({
       </Card>
 
       {/* Contact Info */}
-      <Card style={{ width: "18rem" }}>
+      <Card>
         <h6>{contact.phone}</h6>
         <h6>{contact.linkedIn}</h6>
         <h6>{contact.github}</h6>
