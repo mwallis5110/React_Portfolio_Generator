@@ -39,6 +39,7 @@ export default function Public() {
             <h1>
               {info.AboutMe.firstName} {info.AboutMe.lastName}
             </h1>
+            <h3>Email me :{info.user_email}</h3>
             <p>{info.AboutMe.introduction}</p>
           </div>
 
@@ -61,7 +62,7 @@ export default function Public() {
             <h6>Soft Skills: {info.Skills.softSkills}</h6>
           </div>
 
-          <h3 className="expHeader">Past Experience</h3>
+          <h3 className="skillsHeader">Past Experience</h3>
           {info.Experience.map((exp) => {
             return (
               <div className="section-edu section-card section-card-edu">
@@ -74,7 +75,7 @@ export default function Public() {
             );
           })}
 
-          <h3 className="expHeader">Projects</h3>
+          <h3 className="skillsHeader">Projects</h3>
           {info.Projects.map((projects) => {
             return (
               <div className="section-about section-card section-card-aboutMe">
