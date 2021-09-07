@@ -7,7 +7,7 @@ import Experience from "../Forms/ExperienceForm";
 import Projects from "../Forms/ProjectForm";
 import Contact from "../Forms/ContactForm";
 import Preview from "../Portfolio_Preview";
-import './sidebar.css';
+import "./sidebar.css";
 
 export default function SidebarConditionals() {
   const [currentForm, setCurrentForm] = useState(1);
@@ -18,14 +18,19 @@ export default function SidebarConditionals() {
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
 
-
-
-
   const renderForm = () => {
     if (currentForm === 1) {
-      return <About aboutMe = {aboutMe} setCurrentForm = {setCurrentForm} setAboutMe = {setAboutMe}/>;
+      return (
+        <About
+          aboutMe={aboutMe}
+          setCurrentForm={setCurrentForm}
+          setAboutMe={setAboutMe}
+        />
+      );
     } else if (currentForm === 2) {
-      return <Education edu = {edu} setCurrentForm= {setCurrentForm} setEdu = {setEdu}/>;
+      return (
+        <Education edu={edu} setCurrentForm={setCurrentForm} setEdu={setEdu} />
+      );
     } else if (currentForm === 3) {
       return (
         <Skills
@@ -47,7 +52,13 @@ export default function SidebarConditionals() {
         />
       );
     } else if (currentForm === 6) {
-      return <Contact contact = {contact} setCurrentForm={setCurrentForm} setContact = {setContact}/>;
+      return (
+        <Contact
+          contact={contact}
+          setCurrentForm={setCurrentForm}
+          setContact={setContact}
+        />
+      );
     } else if (currentForm === 7) {
       return (
         <Preview
@@ -66,7 +77,11 @@ export default function SidebarConditionals() {
 
   return (
     <div>
-      <Sidebar currentForm={currentForm} handleFormChange={handleFormChange} id="currentForm"/>
+      <Sidebar
+        currentForm={currentForm}
+        handleFormChange={handleFormChange}
+        id="currentForm"
+      />
       {renderForm()}
     </div>
   );
