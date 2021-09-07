@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 
 const contactMeSchema = new Schema({
-    phoneNumber: {
+    phone: {
         type: String,
         required: false,
         trim: true,

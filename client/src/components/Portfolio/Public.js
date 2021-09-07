@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
-import './public.css'
-import { Link } from 'react-router-dom';
+import './public.css';
+import Particles from 'react-particles-js';
+
 
 export default function Public() {
     const { email } = useParams();
@@ -22,10 +23,12 @@ export default function Public() {
     const handleLink = (link) => {
         window.location.replace(link)
     }
-
+   
     console.log(port.AboutMe);
     return (
-        <div>
+        
+        <div classname="particleDiv">
+             <Particles params={{particles: {number: {value: 70,density: {enable: true,value_area: 1000,}},},}}/>
             {info.AboutMe ? (
                 <div className="portfolioDiv">
                     <h3 className="aboutMeHeader"><span>About Me</span></h3>
@@ -33,7 +36,8 @@ export default function Public() {
                         <h1>
                             {info.AboutMe.firstName} {info.AboutMe.lastName}
                         </h1>
-                        <p>{info.AboutMe.introduction}</p>
+                        <h3>{info.AboutMe.introduction}</h3>
+                        <h4>Email: {info.user_email}</h4>
                     </div>
 
                     <h3 className="eduHeader">Education</h3>
@@ -54,6 +58,14 @@ export default function Public() {
                         <h6>Hard Skills: {info.Skills.hardSkills}</h6>
                         <h6>Soft Skills: {info.Skills.softSkills}</h6>
                     </div>
+
+                    <h3 className="skillsHeader">Skills</h3>
+                    <div className='section-contact section-card section-card-skills'>
+                        <h6>Languages: {info.Skills.languages}</h6>
+                        <h6>Programming Languages: {info.Skills.programmingLanguages}</h6>
+                        <h6>Hard Skills: {info.Skills.hardSkills}</h6>
+                        <h6>Soft Skills: {info.Skills.softSkills}</h6>
+                    </div>
                     
                     <div className="container">
                         <footer className="footer">
@@ -61,7 +73,7 @@ export default function Public() {
                             <div onClick={() => {handleLink("//"+info.ContactMe.linkedIn)}}><img src="/icons/linkedIn.png" className = "icon" alt="LinkedIn"></img></div>
                             <div onClick={() => {handleLink("//"+info.ContactMe.facebook)}}><img src = "/icons/facebook.png" className = "icon" alt="Facebook"></img></div>
                             <div onClick={() => {handleLink("//"+info.ContactMe.instagram)}}><img src = "/icons/instagram.png" className = "icon" alt="Instagram"></img></div>
-                            <span class="stretch"></span>
+                            <div onClick={() => {handleLink("//"+info.ContactMe.twitter)}}><img src = "/icons/twitter.png" className = "icon" alt="Twitter"></img></div>
                         </footer>
                     </div>
                 </div>
@@ -69,4 +81,3 @@ export default function Public() {
         </div>
     )
 };
-
