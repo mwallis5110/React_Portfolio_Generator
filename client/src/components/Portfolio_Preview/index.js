@@ -11,6 +11,8 @@ import NavBar from "../Navbar";
 import { useParams } from "react-router";
 import Axios from "axios";
 import './preview.css';
+import { useHistory } from "react-router-dom";
+
 // How should forms imported here interact witht he rest of the page?
 
 export default function Preview({
@@ -38,6 +40,8 @@ export default function Preview({
     console.log(port);
   }, [port]);
 
+  const history = useHistory()
+
   const submitPortfolio = () => {
     const id = localStorage.getItem("userId");
     const email = localStorage.getItem("email");
@@ -50,28 +54,24 @@ export default function Preview({
         hardSkills: skills[2],
         softSkills: skills[3],
       },
-      Experience: {
-        jobTitle: exp[0],
-        startDate: exp[1],
-        endDate: exp[2],
-        achievements: exp[3],
-        description: exp[4],
-      },
-      Projects: {
-        title: projects[0],
-        description: projects[1],
-        images: projects[2],
-      },
+      Experience: exp, 
+      Projects: projects,
       ContactMe: contact,
       user: id,
       user_email: email,
     };
-  };
+  // };
 
-  // Axios.post('/api/portfolio', portfolio).then(data => console.log(data))
+  Axios.post('/api/portfolio', portfolio).then(data => {
+      console.log(data)
+    history.push('/portfolio/' + data.data.user_email)
+  })
+  };
 
   return (
     //About Me info
+    
+
     <div className="container">
       <Card style={{ width: "18rem" }}>
         <h6>
@@ -96,40 +96,48 @@ export default function Preview({
       {/* Skills info */}
       <Row>
         <Card style={{ width: "40rem" }}>
-          {skills[0].map((data) => {
-            return (
-              <div>
-                <h6>{data}</h6>
-              </div>
-            );
-          })}
+          {skills[0]
+            ? skills[0].map((data) => {
+                return (
+                  <div>
+                    <h6>{data}</h6>
+                  </div>
+                );
+              })
+            : null}
         </Card>
         <Card style={{ width: "40rem" }}>
-          {skills[1].map((data) => {
-            return (
-              <div>
-                <h6>{data}</h6>
-              </div>
-            );
-          })}
+          {skills[1]
+            ? skills[1].map((data) => {
+                return (
+                  <div>
+                    <h6>{data}</h6>
+                  </div>
+                );
+              })
+            : null}
         </Card>
         <Card style={{ width: "40rem" }}>
-          {skills[2].map((data) => {
-            return (
-              <div>
-                <h6>{data}</h6>
-              </div>
-            );
-          })}
+          {skills[2]
+            ? skills[2].map((data) => {
+                return (
+                  <div>
+                    <h6>{data}</h6>
+                  </div>
+                );
+              })
+            : null}
         </Card>
         <Card style={{ width: "40rem" }}>
-          {skills[3].map((data) => {
-            return (
-              <div>
-                <h6>{data}</h6>
-              </div>
-            );
-          })}
+          {skills[3]
+            ? skills[3].map((data) => {
+                return (
+                  <div>
+                    <h6>{data}</h6>
+                  </div>
+                );
+              })
+            : null}
         </Card>
       </Row>
 
@@ -170,6 +178,7 @@ export default function Preview({
         <h6>{contact.facebook}</h6>
         <h6>{contact.instagram}</h6>
       </Card>
+      <Button onClick={() => submitPortfolio()}>Looks Good!</Button>
     </div>
   );
 }

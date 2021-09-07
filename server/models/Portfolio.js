@@ -43,11 +43,11 @@ const portfolioSchema = new Schema({
     },
   ],
   Skills: {
-    // languages: {
-    //     type: Array,
-    //     required: false,
-    //     trim: true,
-    // },
+    languages: {
+        type: Array,
+        required: false,
+        trim: true,
+    },
     programmingLanguages: {
       type: Array,
       required: false,
@@ -65,56 +65,57 @@ const portfolioSchema = new Schema({
     },
   },
 
-  //   Experience: [
-  //     {
-  //     jobTitle: {
-  //         type: Array,
-  //         required: false,
-  //         trim: true,
-  //     },
-  //     jobDescription: {
-  //         type: Array,
-  //         required: false,
-  //         trim: true,
-  //     },
-  //     startDate: {
-  //         type: Date,
-  //         required: false,
-  //         trim: true,
-  //     },
-  //     endDate: {
-  //         type: Date,
-  //         required: false,
-  //         trim: true,
-  //     },
-  //     achievements: {
-  //         type: Array,
-  //         required: false,
-  //         trim: true,
-  //     },
-  //   }],
-  //   Projects: [{
-  //     title: {
-  //         type: Array,
-  //         required: true,
-  //         trim: true,
-  //     },
-  //     description: {
-  //         type: Array,
-  //         required: true,
-  //         trim: true,
-  //     },
-  //     images: {
-  //         type: Array,
-  //         required: true,
-  //         trim: true,
-  //     },
+    Experience: [
+      {
+      jobTitle: {
+          type: Array,
+          required: false,
+          trim: true,
+      },
+      jobDescription: {
+          type: Array,
+          required: false,
+          trim: true,
+      },
+      startDate: {
+          type: Date,
+          required: false,
+          trim: true,
+      },
+      endDate: {
+          type: Date,
+          required: false,
+          trim: true,
+      },
+      achievements: {
+          type: Array,
+          required: false,
+          trim: true,
+      },
+    }],
+
+    Projects: [{
+      title: {
+          type: Array,
+          required: true,
+          trim: true,
+      },
+      description: {
+          type: Array,
+          required: true,
+          trim: true,
+      },
+      images: {
+          type: Array,
+          required: true,
+          trim: true,
+      },
   //     link: {
   //         type: Array,
   //         required: true,
   //         trim: true,
   //     },
-  //   }],
+    }],
 
   ContactMe: {
     phoneNumber: {

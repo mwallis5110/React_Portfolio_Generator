@@ -1,0 +1,11 @@
+.portfolioDiv{
+    background-color:white;
+    border-radius: 15px;
+    position:relative;
+    left: 50%;
+    top: 50%;
+    margin-top: 50px;
+    max-width: 75%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}

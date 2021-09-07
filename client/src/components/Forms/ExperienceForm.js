@@ -104,7 +104,13 @@ const ExperienceForm = ({exp, setExp, setCurrentForm}) => {
                     <Button
                       onClick={() => {
                         setExp([...exp, experience]);
-                        setExperience({});
+                        setExperience({
+                          jobTitle: "",
+                          jobDescription: "",
+                          startDate: "",
+                          endDate: "",
+                          achievements: "",
+                        });
                       }}
                     >
                       Add Experience

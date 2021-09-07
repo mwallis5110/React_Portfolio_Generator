@@ -43,15 +43,23 @@ const AboutMeForm = ({ aboutMe, setAboutMe, setCurrentForm }) => {
                   <Form.Label>Introduce yourself!</Form.Label>
                   <Form.Control as="textarea" onChange={(e) => { handleInputChange(e) }}
                     rows={3}
-                    style={{ height: '223px' }} />
+                    style={{ height: "223px" }}
+                  />
                 </Form.Group>
               </Form>
             </Col>
           </Row>
-          <Button variant="primary" onClick={() => { setCurrentForm(2) }}>Submit About Me!</Button>{" "}
+          <Button
+            variant="primary"
+            onClick={() => {
+              setCurrentForm(2);
+            }}
+          >
+            Submit
+          </Button>{" "}
         </Container>
       </>
-    </div >
+    </div>
   );
 };
 
