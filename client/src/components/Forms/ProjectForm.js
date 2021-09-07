@@ -14,7 +14,6 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
     const [assignment, setAssignment] = useState({
       title: '',
       description: '',
-      images: '',
       link: '',
     });
 
@@ -66,7 +65,7 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
                 <Button className = "wideBtn"
                   onClick={() => {
                     setProjects([...projects, assignment]);
-                    setAssignment({});
+                    setAssignment({ title: "", description: "", link: "" });
                   }}
                 >
                   Add

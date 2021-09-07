@@ -63,7 +63,7 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
                   <Button
                     onClick={() => {
                       setEdu([...edu, education]);
-                      setEducation({});
+                      setEducation({institution:'', degree:'', graduationDate: ''});
                     }}
                   >
                     Add Education

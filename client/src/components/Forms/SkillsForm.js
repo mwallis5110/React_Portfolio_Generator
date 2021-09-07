@@ -54,6 +54,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                     type="text"
                     placeholder="Spoken Languages"
                     name="spokenLang"
+                    value={spokenLang}
                     onChange={(e) => {
                       handleInputChange(e);
                     }}
@@ -70,6 +71,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                     type="text"
                     placeholder="Programming Languages"
                     name="lang"
+                    value={lang}
                     onChange={(e) => {
                       handleInputChange(e);
                     }}
@@ -97,6 +99,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       as="textarea"
                       rows={3}
                       name="hard"
+                      value={hard}
                       onChange={(e) => {
                         handleInputChange(e);
                       }}
