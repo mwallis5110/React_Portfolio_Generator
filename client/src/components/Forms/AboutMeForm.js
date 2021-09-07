@@ -39,17 +39,9 @@ const AboutMeForm = ({ aboutMe, setAboutMe, setCurrentForm }) => {
                     handleInputChange(e);
                   }}
                 />
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Form.Label>A Brief Personal Introduction</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    name="introduction"
-                    onChange={(e) => {
-                      handleInputChange(e);
-                    }}
+                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                  <Form.Label>Introduce yourself!</Form.Label>
+                  <Form.Control as="textarea" onChange={(e) => { handleInputChange(e) }}
                     rows={3}
                     style={{ height: "223px" }}
                   />

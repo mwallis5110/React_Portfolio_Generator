@@ -70,6 +70,8 @@ export default function Preview({
 
   return (
     //About Me info
+    
+
     <div className="container">
       <Card style={{ width: "18rem" }}>
         <h6>
@@ -94,40 +96,48 @@ export default function Preview({
       {/* Skills info */}
       <Row>
         <Card style={{ width: "40rem" }}>
-          {skills[0].map((data) => {
-            return (
-              <div>
-                <h6>{data}</h6>
-              </div>
-            );
-          })}
+          {skills[0]
+            ? skills[0].map((data) => {
+                return (
+                  <div>
+                    <h6>{data}</h6>
+                  </div>
+                );
+              })
+            : null}
         </Card>
         <Card style={{ width: "40rem" }}>
-          {skills[1].map((data) => {
-            return (
-              <div>
-                <h6>{data}</h6>
-              </div>
-            );
-          })}
+          {skills[1]
+            ? skills[1].map((data) => {
+                return (
+                  <div>
+                    <h6>{data}</h6>
+                  </div>
+                );
+              })
+            : null}
         </Card>
         <Card style={{ width: "40rem" }}>
-          {skills[2].map((data) => {
-            return (
-              <div>
-                <h6>{data}</h6>
-              </div>
-            );
-          })}
+          {skills[2]
+            ? skills[2].map((data) => {
+                return (
+                  <div>
+                    <h6>{data}</h6>
+                  </div>
+                );
+              })
+            : null}
         </Card>
         <Card style={{ width: "40rem" }}>
-          {skills[3].map((data) => {
-            return (
-              <div>
-                <h6>{data}</h6>
-              </div>
-            );
-          })}
+          {skills[3]
+            ? skills[3].map((data) => {
+                return (
+                  <div>
+                    <h6>{data}</h6>
+                  </div>
+                );
+              })
+            : null}
         </Card>
       </Row>
 
@@ -168,7 +178,7 @@ export default function Preview({
         <h6>{contact.facebook}</h6>
         <h6>{contact.instagram}</h6>
       </Card>
-      <Button onClick= { () => submitPortfolio()}>Looks Good!</Button>
+      <Button onClick={() => submitPortfolio()}>Looks Good!</Button>
     </div>
   );
 }

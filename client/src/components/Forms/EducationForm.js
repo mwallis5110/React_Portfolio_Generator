@@ -25,7 +25,7 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
       <div>
         <>
           <Container>
-            <h1>Education</h1>
+            <h1>Education Information</h1>
             <Row>
               <Col>
                 <Form>
@@ -48,8 +48,6 @@ const EducationForm = ({edu, setEdu, setCurrentForm}) => {
                     }}
                   />
                 </Form>
-              </Col>
-              <Col>
                 <Form>
                   <input
                     type="date"

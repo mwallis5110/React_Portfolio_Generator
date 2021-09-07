@@ -79,6 +79,8 @@ const ContactForm = ({contact, setContact, setCurrentForm}) => {
                         <Form>
                             <input type="text" placeholder="Phone Number" name="phone" onChange={(e) => {handleInputChange(e);}}/>
                             {/* <input type="text" placeholder="Email" name="email" onChange={(e) => {handleInputChange(e);}}/> */}
+                            <input type="text" placeholder="Facebook URL" name="facebook" onChange={(e) => {handleInputChange(e);}}/>
+                            <input type="text" placeholder="Instagram URL" name="instagram" onChange={(e) => {handleInputChange(e);}}/>
                         </Form>
                     </Col>
                     <Col>
@@ -86,12 +88,6 @@ const ContactForm = ({contact, setContact, setCurrentForm}) => {
                             <input type="text" placeholder="LinkedIn URL" name="linkedIn" onChange={(e) => {handleInputChange(e);}}/>
                             <input type="text" placeholder="Github URL" name="github" onChange={(e) => {handleInputChange(e);}}/>
                             <input type="text" placeholder="Twitter URL" name="twitter" onChange={(e) => {handleInputChange(e);}}/>
-                        </Form>
-                    </Col>
-                    <Col>
-                        <Form>
-                            <input type="text" placeholder="Facebook URL" name="facebook" onChange={(e) => {handleInputChange(e);}}/>
-                            <input type="text" placeholder="Instagram URL" name="instagram" onChange={(e) => {handleInputChange(e);}}/>
                         </Form>
                     </Col>
                 </Row>
