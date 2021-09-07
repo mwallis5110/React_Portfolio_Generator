@@ -35,18 +35,18 @@ export default function Portfolio() {
 
 
 // Particle stuff (Pretty Lines)
- {/* <div className="particlesDiv">
-        <Particles
-                params={{
-                particles: {
-                    number: {
-                    value: 70,
-                    density: {
-                        enable: true,
-                        value_area: 1000,
-                    }
-                    },
-                },
-                }}
-            />
-        </div> */}
+//  <div className="particlesDiv">
+//         <Particles
+//                 params={{
+//                 particles: {
+//                     number: {
+//                     value: 70,
+//                     density: {
+//                         enable: true,
+//                         value_area: 1000,
+//                     }
+//                     },
+//                 },
+//                 }}
+//             />
+//         </div> 

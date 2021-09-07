@@ -84,51 +84,11 @@ export default function Public() {
 
           <div className="container">
             <footer className="footer">
-              <div
-                onClick={() => {
-                  handleLink(info.ContactMe.github);
-                }}
-              >
-                <img
-                  src="/icons/github.png"
-                  className="icon"
-                  alt="Github"
-                ></img>
-              </div>
-              <div
-                onClick={() => {
-                  handleLink(info.ContactMe.linkedIn);
-                }}
-              >
-                <img
-                  src="/icons/linkedIn.png"
-                  className="icon"
-                  alt="LinkedIn"
-                ></img>
-              </div>
-              <div
-                onClick={() => {
-                  handleLink(info.ContactMe.facebook);
-                }}
-              >
-                <img
-                  src="/icons/facebook.png"
-                  className="icon"
-                  alt="Facebook"
-                ></img>
-              </div>
-              <div
-                onClick={() => {
-                  handleLink(info.ContactMe.instagram);
-                }}
-              >
-                <img
-                  src="/icons/instagram.png"
-                  className="icon"
-                  alt="Instagram"
-                ></img>
-              </div>
-              <span class="stretch"></span>
+                <div target="_blank" onClick={() => {handleLink("//"+info.ContactMe.github)}}><img src="/icons/github.png" className = "icon" alt="Github"></img></div>
+                <div onClick={() => {handleLink("//"+info.ContactMe.linkedIn)}}><img src="/icons/linkedIn.png" className = "icon" alt="LinkedIn"></img></div>
+                <div onClick={() => {handleLink("//"+info.ContactMe.facebook)}}><img src = "/icons/facebook.png" className = "icon" alt="Facebook"></img></div>
+                <div onClick={() => {handleLink("//"+info.ContactMe.instagram)}}><img src = "/icons/instagram.png" className = "icon" alt="Instagram"></img></div>
+                <div onClick={() => {handleLink("//"+info.ContactMe.twitter)}}><img src = "/icons/twitter.png" className = "icon" alt="Twitter"></img></div>
             </footer>
           </div>
         </div>
