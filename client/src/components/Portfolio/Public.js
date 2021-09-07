@@ -46,10 +46,12 @@ export default function Public() {
                     })}
                     <h3 className="skillsHeader">Skills</h3>
                     <div className='section-contact section-card section-card-skills'>
-                        <h6>GitHub: {port.Skills.hardSkills}</h6>
-                        <h6>FaceBook: {port.ContactMe.facebook}</h6>
-                        <h6>Email: <a mailto={port.user_email}>{port.user_email}</a></h6>
+                        <h6>Languages: {port.Skills.languages}</h6>
+                        <h6>Programming Languages: {port.Skills.programmingLanguages}</h6>
+                        <h6>Hard Skills: {port.Skills.hardSkills}</h6>
+                        <h6>Soft Skills: {port.Skills.softSkills}</h6>
                     </div>
+                    
                     <div className="container">
                         <footer className="footer">
                             <a href={port.ContactMe.github}><img src="/icons/github.png" className = "icon" alt="Github"></img></a>
