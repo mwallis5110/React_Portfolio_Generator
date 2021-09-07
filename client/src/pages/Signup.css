@@ -1,0 +1,54 @@
+.first-container {
+
+}
+.primary-container {
+}
+
+
+
+.welcome {
+    font-size: x-large;
+    background: white !important;
+    color: black !important;
+}
+
+
+.first-division {
+    position: absolute;
+    /* left: 50%; */
+    top: 25vh;
+    width: 20vw !important;
+    height: 50vh !important;
+    text-decoration: none;
+    background-color: white !important;
+    color: darkblue !important;
+    text-align: center;
+}
+
+
+.form-input {
+    display: block;
+    margin: 4px;
+    width: 100%;
+}
+
+.btn {
+    margin-top: 10px;
+
+}
+
+
+.sign-up-link{
+    display: block;
+    margin-top: 5px;
+    text-decoration: none !important;
+    color: black;
+}
+
+.sign-up-link:hover {
+    color: black;
+}
+
+.second-division {
+
+}

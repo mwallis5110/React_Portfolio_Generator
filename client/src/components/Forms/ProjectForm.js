@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
+import './ProjectForm.css';
 import Button from 'react-bootstrap/Button';
 
 
@@ -54,15 +55,6 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
                 <Form>
                   <input
                     type="text"
-                    placeholder="Image URL"
-                    name="images"
-                    value={assignment.images}
-                    onChange={(e) => {
-                      handleInputChange(e);
-                    }}
-                  />
-                  <input
-                    type="text"
                     placeholder="URL to Project"
                     name="link"
                     value={assignment.link}
@@ -71,7 +63,7 @@ const ProjectForm = ({projects, setProjects, setCurrentForm}) => {
                     }}
                   />
                 </Form>
-                <Button
+                <Button className = "wideBtn"
                   onClick={() => {
                     setProjects([...projects, assignment]);
                     setAssignment({});

@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import './skillsform.css'
 
 
 const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
@@ -38,7 +39,6 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
         default:
           console.log(value);
       }
-    //   setSkills({ ...aboutMe, [name]: value });
     }; 
 
     return (
@@ -47,7 +47,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
           <Container>
             <h1>Skills</h1>
             <Row>
-              <Col>
+              <Col className="leftCol">
                 <Form>
                   <Form.Label>Languages</Form.Label>
                   <input
@@ -58,6 +58,14 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       handleInputChange(e);
                     }}
                   />
+                  <Button
+                    variant="primary"
+                    onClick={() => {
+                      setSpokenLangArr([...spokenLangArr,spokenLang]);
+                      setSpokenLang('');
+                    }}
+                  />
+
                   <input
                     type="text"
                     placeholder="Programming Languages"
@@ -70,7 +78,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                     variant="primary"
                     onClick={() => {
                       setLangArr([...langArr, lang]);
-                      setSpokenLangArr([...spokenLangArr,spokenLang]);
+                      setLang('');
                     }}
                   >
                     Add Language!
@@ -78,7 +86,7 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                 </Form>
               </Col>
 
-              <Col>
+              <Col className="rightCol">
                 <Form>
                   <Form.Group
                     className="mb-3"
@@ -97,10 +105,12 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       variant="primary"
                       onClick={() => {
                         setHardArr([...hardArr, hard]);
+                        setHard('')
                       }}
                     >
                       Add Hard Skill!
                     </Button>{" "}
+
                     <Form.Label>Soft Skills</Form.Label>
                     <input
                       as="textarea"
