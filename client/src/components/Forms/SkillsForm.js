@@ -64,8 +64,8 @@ const SkillsForm = ({skills, setSkills, setCurrentForm}) => {
                       setSpokenLangArr([...spokenLangArr,spokenLang]);
                       setSpokenLang('');
                     }}
-                  />
-
+                  >Add Spoken Language</Button>
+                  <Form.Label>Programming Languages</Form.Label>
                   <input
                     type="text"
                     placeholder="Programming Languages"
