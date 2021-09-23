@@ -5,9 +5,7 @@ import { ADD_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
-
-import './Signup.css'
-
+import "./Signup.css";
 
 export default function Signup() {
   const [formState, setFormState] = useState({
@@ -44,62 +42,59 @@ export default function Signup() {
   };
 
   return (
-      <main className="d-flex justify-content-center mb-4 primary-container">
-        <div className="col-12 col-lg-10 rounded first-division">
-          <div className="card">
-            <h4 className="bg-dark text-light p-2 welcome">Sign Up</h4>
-            <div className="card-body">
-              {/* {data ? (
-              <p>
-                Success! You may now head{" "}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : ( */}
-              <form >
-                <input
-                  className="form-input"
-                  placeholder="Your username"
-                  name="username"
-                  type="text"
-                  value={formState.name}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: "pointer" }}
-                  type="button"
-                  onClick={(e) => { handleFormSubmit(e) }}
-                >
-                  Submit
-                </button>
-                <Link to="/" className="sign-up-link">Already have an account? Login up here.</Link>
-              </form>
-              {/* )} */}
+    <main className="d-flex justify-content-center mb-4 primary-container">
+      
+        <div className="card">
+          <h4 className="bg-dark text-light p-2 welcome">Sign Up</h4>
+          <div className="card-body">
+            <form>
+              <input
+                className="form-input"
+                placeholder="Your username"
+                name="username"
+                type="text"
+                value={formState.name}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="Your email"
+                name="email"
+                type="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+              <button
+                className="btn btn-block btn-primary"
+                style={{ cursor: "pointer" }}
+                type="button"
+                onClick={(e) => {
+                  handleFormSubmit(e);
+                }}
+              >
+                Submit
+              </button>
+              <Link to="/" className="sign-up-link">
+                Already have an account? Login up here.
+              </Link>
+            </form>
 
-              {error && (
-                <div className="my-3 p-3 bg-danger text-white">
-                  {error.message}
-                </div>
-              )}
-            </div>
+            {error && (
+              <div className="my-3 p-3 bg-danger text-white">
+                {error.message}
+              </div>
+            )}
           </div>
         </div>
-      </main>
+      
+    </main>
   );
-};
+}

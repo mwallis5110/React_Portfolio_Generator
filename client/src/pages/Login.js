@@ -5,7 +5,7 @@ import { LOGIN_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
-import './Login.css';
+import "./Login.css";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -29,8 +29,8 @@ const Login = (props) => {
       const { data } = await login({
         variables: { ...formState },
       });
-      console.log('Test', data)
-      localStorage.setItem('userId', data.login.user._id);
+      console.log("Test", data);
+      localStorage.setItem("userId", data.login.user._id);
       localStorage.setItem("email", data.login.user.email);
       Auth.login(data.login.token);
     } catch (e) {
@@ -44,10 +44,8 @@ const Login = (props) => {
     });
   };
 
-
   return (
     <main className="d-flex justify-content-center mb-4 primary-container">
-      <div className="col-12 col-lg-10 first-division rounded align-items-center">
         <div className="card">
           <h4 className="bg-dark text-light p-2 welcome">Welcome!</h4>
           <div className="card-body">
@@ -81,7 +79,9 @@ const Login = (props) => {
                 >
                   Log In
                 </button>
-                <Link to="/signup" className="sign-up-link">Don't have an account? Sign up here.</Link>
+                <Link to="/signup" className="sign-up-link">
+                  Don't have an account? Sign up here.
+                </Link>
               </form>
             )}
 
@@ -92,7 +92,6 @@ const Login = (props) => {
             )}
           </div>
         </div>
-      </div>
     </main>
   );
 };

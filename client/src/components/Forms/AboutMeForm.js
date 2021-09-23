@@ -1,25 +1,23 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { } from "react-bootstrap";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import './AboutMeForm.css';
-import Button from 'react-bootstrap/Button';
-
+import {} from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import "./AboutMeForm.css";
+import Button from "react-bootstrap/Button";
 
 const AboutMeForm = ({ aboutMe, setAboutMe, setCurrentForm }) => {
-
   const handleInputChange = (event) => {
-    const { name, value } = event.target
-    setAboutMe({ ...aboutMe, [name]: value })
-  }
+    const { name, value } = event.target;
+    setAboutMe({ ...aboutMe, [name]: value });
+  };
   return (
     <div>
       <>
         <Container>
-          <h1>About Me Things</h1>
+          <h1>About Me</h1>
           <Row>
             <Col>
               <Form>
@@ -39,19 +37,34 @@ const AboutMeForm = ({ aboutMe, setAboutMe, setCurrentForm }) => {
                     handleInputChange(e);
                   }}
                 />
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                  <Form.Label>Example textarea</Form.Label>
-                  <Form.Control as="textarea" onChange={(e) => { handleInputChange(e) }}
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlTextarea1"
+                >
+                  <Form.Label>Introduce yourself!</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    onChange={(e) => {
+                      handleInputChange(e);
+                    }}
                     rows={3}
-                    style={{ height: '223px' }} />
+                    style={{ height: "223px" }}
+                  />
                 </Form.Group>
               </Form>
             </Col>
           </Row>
-          <Button variant="primary" onClick={() => { setCurrentForm(2) }}>Submit About Me!</Button>{" "}
+          <Button
+            variant="primary"
+            onClick={() => {
+              setCurrentForm(2);
+            }}
+          >
+            Submit
+          </Button>{" "}
         </Container>
       </>
-    </div >
+    </div>
   );
 };
 

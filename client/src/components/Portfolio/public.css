@@ -1,13 +1,10 @@
 img{
     justify-content: center;
+    float:right; 
     display: inline;
     border-radius: 30px;
     width:  40px;
     height: 40px;
-    object-fit: cover;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
     margin-right: 30px;
     margin-left: 30px;
     margin-top: 25px;
@@ -18,7 +15,7 @@ img{
      text-align: center;
      height: 100%;
      width:100%;
-     background-color: #6F8DB0;
+     background-color: #e0eeff;
      border-radius: 15px;
      margin-top: 50px;
  }
@@ -31,7 +28,6 @@ img{
  
  .stretch {
     width: 100%;
-    display: inline-block;
     font-size: 0;
     line-height: 0
 }
@@ -127,4 +123,8 @@ img{
  max-width: 75%;
  -webkit-transform: translate(-50%, 0%);
  transform: translate(-50%, 0%);
+}
+
+.portfolioDiv{
+    margin-top: -45%;
 }

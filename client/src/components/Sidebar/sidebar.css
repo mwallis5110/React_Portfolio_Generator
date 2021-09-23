@@ -1,0 +1,31 @@
+.navBar{
+    padding-bottom: none;
+}
+
+.navLinks{
+    padding:none;
+    font-size:20px;
+}
+
+#aboutForm:hover{
+    background-color:aquamarine;
+}
+#educationForm:hover{
+    background-color:aquamarine;
+}
+#skillsForm:hover{
+    background-color:aquamarine;
+}
+#experienceForm:hover{
+    background-color:aquamarine;
+}
+#projectsForm:hover{
+    background-color:aquamarine;
+}
+#contactForm:hover{
+    background-color:aquamarine;
+}
+
+.active{
+    background-color:rgb(64, 239, 252);
+}

@@ -1,0 +1,14 @@
+.card {
+    text-align: center;
+    top: 25%;
+    /* color: white; */
+    /* background: transparent; */
+    width: 50vw;
+    margin-top: 10px;
+    margin-left: 25%;
+}
+
+button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
